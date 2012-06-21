@@ -1,0 +1,494 @@
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist}{\section{xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist Class Reference}
+\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist}\index{xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist@{xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist}}
+}
+
+
+The \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist}{Zhang\-Shasha\-Tree\-Dist} class implements the Zhang and Shasha tree editing distance algorithm from their 1989 paper.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aaebe4170d96974bbb7886d47e945155b}{create\-\_\-node}
+\begin{DoxyCompactList}\small\item\em Factory method used to create a node in the canonical parse-\/tree representation. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2da4b924eb6df43476c4294480403036}{set\-\_\-position\-\_\-to\-\_\-id}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action to set the I\-D of a parse-\/tree node, to its position as determined by some traversal. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a461fef31caf7ae9d4b80feb739aeb762}{compute\-\_\-labels}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action to compute a list of node labels indexed by node position as determined by some traversal. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a34effff9b635661b8682c34de0d8d838}{compute\-\_\-l}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action to compute the position of the leftmost descendant of each node within the parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a67818415c43fd9ffabc973edab2ace16}{compute\-\_\-lr\-\_\-keyroots}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action to compute the lr\-\_\-keyroots (as defined in the Zhang-\/\-Shasha algorithm). \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a3ccf16e1cbcde6ff2bb44f5ba591d5cf}{get\-\_\-lr\-\_\-keyroots}
+\begin{DoxyCompactList}\small\item\em Method to get the lr\-\_\-keyroots from the root parse-\/tree node. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a62b5dbe0d1dbae497795f6be73ad0016}{postorder\-\_\-traverse}
+\begin{DoxyCompactList}\small\item\em Method to do a postorder traverse of a parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2b7f8a6b3c9b3ea6070966870bbdc6fa}{preorder\-\_\-traverse}
+\begin{DoxyCompactList}\small\item\em Method to do a preorder traverse of a parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a80ae16ae164243f0f122efbe2f3dc19c}{unit\-\_\-cost}
+\begin{DoxyCompactList}\small\item\em Edit-\/cost function\-: Given an operation, compute the cost of that operation. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a196aaa54dedc734f043f9423f6f78cc6}{edit\-\_\-distance\-\_\-cost}
+\begin{DoxyCompactList}\small\item\em Edit-\/cost function\-: Given an operation, compute the cost of that operation. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aa6b48b4fe2accbcf2e1c0ad74a224841}{treedist}
+\begin{DoxyCompactList}\small\item\em Computes the tree distance matrix between the subtree rooted at node i in tree 1 and node j in tree 2. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2f2aca0d6ff3d59fbeb05ea6fed3897d}{compute\-\_\-tree\-\_\-dist}
+\begin{DoxyCompactList}\small\item\em Compute the tree edit distance between tree 1 and tree 2. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a02b0900889c701584275220e14dbbd06}{output\-\_\-edit\-\_\-script}
+\begin{DoxyCompactList}\small\item\em Method used to report an edit script from the dynamic programming matrices computed by Zhang and Shasha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a257fb5289527a7a6a44dfaf47324e270}{int \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a257fb5289527a7a6a44dfaf47324e270}{D\-E\-L\-E\-T\-E} = 1}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a257fb5289527a7a6a44dfaf47324e270}
+
+\begin{DoxyCompactList}\small\item\em Constant associated with the D\-E\-L\-E\-T\-E edit operation. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a59a1dc0695c9a224ec9eb9d6ab1ebc3b}{int \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a59a1dc0695c9a224ec9eb9d6ab1ebc3b}{U\-P\-D\-A\-T\-E} = 2}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a59a1dc0695c9a224ec9eb9d6ab1ebc3b}
+
+\begin{DoxyCompactList}\small\item\em Constant associated with the U\-P\-D\-A\-T\-E edit operation. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aca383b3f3bd06fcfee4ddc682bfa513c}{int \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aca383b3f3bd06fcfee4ddc682bfa513c}{I\-N\-S\-E\-R\-T} = 3}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aca383b3f3bd06fcfee4ddc682bfa513c}
+
+\begin{DoxyCompactList}\small\item\em Constant associated with the I\-N\-S\-E\-R\-T edit operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1distances_1_1_zhang_shasha_tree_dist}{Zhang\-Shasha\-Tree\-Dist} class implements the Zhang and Shasha tree editing distance algorithm from their 1989 paper. 
+
+
+
+Definition at line 105 of file distances.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a34effff9b635661b8682c34de0d8d838}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!compute\-\_\-l@{compute\-\_\-l}}
+\index{compute\-\_\-l@{compute\-\_\-l}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{compute\-\_\-l}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-compute\-\_\-l (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a34effff9b635661b8682c34de0d8d838}
+
+
+Node-\/visitor action to compute the position of the leftmost descendant of each node within the parse tree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The node being visited \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters used  params\mbox{[}'l'\mbox{]} == \mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated params. The node is not updated. Really, params should be in,out and we should return None or some code to the calling environment. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about doing a time/space analysis for each of these functions and compare to Zhang and Shasha's paper. 
+\end{DoxyNote}
+
+
+Definition at line 165 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a461fef31caf7ae9d4b80feb739aeb762}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!compute\-\_\-labels@{compute\-\_\-labels}}
+\index{compute\-\_\-labels@{compute\-\_\-labels}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{compute\-\_\-labels}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-compute\-\_\-labels (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a461fef31caf7ae9d4b80feb739aeb762}
+
+
+Node-\/visitor action to compute a list of node labels indexed by node position as determined by some traversal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The node being visited \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters used  params\mbox{[}'labels'\mbox{]} == \mbox{[}\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated node and params\mbox{[}'labels'\mbox{]}. Really, node and params should be in,out parameters and we should return None. 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a67818415c43fd9ffabc973edab2ace16}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!compute\-\_\-lr\-\_\-keyroots@{compute\-\_\-lr\-\_\-keyroots}}
+\index{compute\-\_\-lr\-\_\-keyroots@{compute\-\_\-lr\-\_\-keyroots}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{compute\-\_\-lr\-\_\-keyroots}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-compute\-\_\-lr\-\_\-keyroots (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a67818415c43fd9ffabc973edab2ace16}
+
+
+Node-\/visitor action to compute the lr\-\_\-keyroots (as defined in the Zhang-\/\-Shasha algorithm). 
+
+Any ancestor of these nodes do not share the same leftmost child as this node. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The node being visited \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters for the Zhang/\-Shasha tree distance algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the modified params  params\mbox{[}'l'\mbox{]} != None and node\mbox{[}'id'\mbox{]} is the position of the node in the parse tree given a postorder traversal  params\mbox{[}'L\-R\-\_\-keyroots'\mbox{]} is computed 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about exceptions, for example the node may not have an I\-D 
+\end{DoxyNote}
+
+
+Definition at line 188 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2f2aca0d6ff3d59fbeb05ea6fed3897d}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!compute\-\_\-tree\-\_\-dist@{compute\-\_\-tree\-\_\-dist}}
+\index{compute\-\_\-tree\-\_\-dist@{compute\-\_\-tree\-\_\-dist}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{compute\-\_\-tree\-\_\-dist}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-compute\-\_\-tree\-\_\-dist (
+\begin{DoxyParamCaption}
+\item[{}]{t1, }
+\item[{}]{t2, }
+\item[{}]{init\-\_\-params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2f2aca0d6ff3d59fbeb05ea6fed3897d}
+
+
+Compute the tree edit distance between tree 1 and tree 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t1} & First parse tree to compare (in canonical tree representation) \\
+\hline
+{\em t2} & Second parse tree to compare (in canonical tree representation) \\
+\hline
+{\em init\-\_\-params} & T\-B\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+some parameters
+\end{DoxyReturn}
+params\mbox{[}'labels1'\mbox{]} position-\/ordered list of node labels for tree 1 (t1)
+
+params\mbox{[}'labels2'\mbox{]} position-\/ordered list of node labels for tree 2 (t2)
+
+params\mbox{[}'l1'\mbox{]} positions of tree 1 leaf nodes
+
+params\mbox{[}'l2'\mbox{]} positions of tree 2 leaf nodes
+
+params\mbox{[}'tree\-\_\-dist'\mbox{]} The distance between subtree at node w/ position i and node w/ position j
+
+params\mbox{[}'update\-\_\-edit\-\_\-cost'\mbox{]} Edit costs associated with updating the label of node i' to the label of node j'
+
+params\mbox{[}'insert\-\_\-edit\-\_\-cost'\mbox{]}, params\mbox{[}'delete\-\_\-edit\-\_\-cost'\mbox{]}
+
+params\mbox{[}'edit\-\_\-ops'\mbox{]} The edit operation to be taken at that (i',j') step (based upon what we did when we filled in the entry (i',j') in the tree dist matrix \begin{DoxyNote}{Note}
+Think about whether there are any exceptions 
+\end{DoxyNote}
+
+
+Definition at line 491 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aaebe4170d96974bbb7886d47e945155b}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!create\-\_\-node@{create\-\_\-node}}
+\index{create\-\_\-node@{create\-\_\-node}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{create\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-create\-\_\-node (
+\begin{DoxyParamCaption}
+\item[{}]{id, }
+\item[{}]{label, }
+\item[{}]{type, }
+\item[{}]{children}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aaebe4170d96974bbb7886d47e945155b}
+
+
+Factory method used to create a node in the canonical parse-\/tree representation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The node identifier (postorder traversal position) \\
+\hline
+{\em label} & The label of the node (parse tree 'content') \\
+\hline
+{\em type} & The production associated with the parse tree node \\
+\hline
+{\em children} & The children of the parse tree node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the parse-\/tree node 
+\end{DoxyReturn}
+
+
+Definition at line 122 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a196aaa54dedc734f043f9423f6f78cc6}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!edit\-\_\-distance\-\_\-cost@{edit\-\_\-distance\-\_\-cost}}
+\index{edit\-\_\-distance\-\_\-cost@{edit\-\_\-distance\-\_\-cost}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{edit\-\_\-distance\-\_\-cost}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-edit\-\_\-distance\-\_\-cost (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{operation, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a196aaa54dedc734f043f9423f6f78cc6}
+
+
+Edit-\/cost function\-: Given an operation, compute the cost of that operation. 
+
+In this cost function, deletes cost the length (measured in tokens as defined by params\mbox{[}'sequence\-\_\-type'\mbox{]}) of the label of node i. Inserts cost the length of the label of node j. Update cost is the string edit distance between the labels of node i and node j.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The position of the node to compare in tree 1 \\
+\hline
+{\em j} & The position of the node to compare in tree 2 \\
+\hline
+{\em operation} & The operation for which to compute the cost \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost of the edit operation 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Type\-Exception} & is thrown when we don't have a 'sequence\-\_\-type' that tells us how to tokenize node labels \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 303 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a3ccf16e1cbcde6ff2bb44f5ba591d5cf}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!get\-\_\-lr\-\_\-keyroots@{get\-\_\-lr\-\_\-keyroots}}
+\index{get\-\_\-lr\-\_\-keyroots@{get\-\_\-lr\-\_\-keyroots}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{get\-\_\-lr\-\_\-keyroots}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-get\-\_\-lr\-\_\-keyroots (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a3ccf16e1cbcde6ff2bb44f5ba591d5cf}
+
+
+Method to get the lr\-\_\-keyroots from the root parse-\/tree node. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The root of the parse tree for which to get the lr\-\_\-keyroots \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters for the Zhang/\-Shasha tree distance algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the lr\-\_\-keyroots in params\mbox{[}'L\-R\-\_\-keyroots'\mbox{]}  params\mbox{[}'L\-R\-\_\-keyroots'\mbox{]} is computed for the entire parse tree rooted at 'node' 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about exceptions, for example, 'L\-R\-\_\-keyroots' may be in a weird state 
+\end{DoxyNote}
+
+
+Definition at line 205 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a02b0900889c701584275220e14dbbd06}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!output\-\_\-edit\-\_\-script@{output\-\_\-edit\-\_\-script}}
+\index{output\-\_\-edit\-\_\-script@{output\-\_\-edit\-\_\-script}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{output\-\_\-edit\-\_\-script}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-output\-\_\-edit\-\_\-script (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{small\-\_\-leaf1, }
+\item[{}]{small\-\_\-leaf2, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a02b0900889c701584275220e14dbbd06}
+
+
+Method used to report an edit script from the dynamic programming matrices computed by Zhang and Shasha. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & The largest 'version1' leaf position \\
+\hline
+\mbox{\tt in}  & {\em j} & The largest 'version2' leaf position \\
+\hline
+\mbox{\tt in}  & {\em small\-\_\-leaf1} & \\
+\hline
+\mbox{\tt in}  & {\em small\-\_\-leaf2} & \\
+\hline
+\mbox{\tt in}  & {\em params} & Parameters necessary to output an edit script \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An edit script to output 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Edit\-Operation} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+We want to revisit the base cases for this when we refactor. This is a secondary method to the output method in the X\-U\-Diff class. 
+\end{DoxyNote}
+
+
+Definition at line 558 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a62b5dbe0d1dbae497795f6be73ad0016}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!postorder\-\_\-traverse@{postorder\-\_\-traverse}}
+\index{postorder\-\_\-traverse@{postorder\-\_\-traverse}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{postorder\-\_\-traverse}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-postorder\-\_\-traverse (
+\begin{DoxyParamCaption}
+\item[{}]{tree, }
+\item[{}]{params, }
+\item[{}]{action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a62b5dbe0d1dbae497795f6be73ad0016}
+
+
+Method to do a postorder traverse of a parse tree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tree} & The parse tree to traverse \\
+\hline
+\mbox{\tt in}  & {\em params} & The params to modify during traversal and parameters for the action method \\
+\hline
+\mbox{\tt in}  & {\em action} & The node-\/visitor action to take on a parse tree node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified tree and params 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about any exceptions here 
+\end{DoxyNote}
+
+
+Definition at line 223 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2b7f8a6b3c9b3ea6070966870bbdc6fa}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!preorder\-\_\-traverse@{preorder\-\_\-traverse}}
+\index{preorder\-\_\-traverse@{preorder\-\_\-traverse}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{preorder\-\_\-traverse}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-preorder\-\_\-traverse (
+\begin{DoxyParamCaption}
+\item[{}]{tree, }
+\item[{}]{params, }
+\item[{}]{action}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2b7f8a6b3c9b3ea6070966870bbdc6fa}
+
+
+Method to do a preorder traverse of a parse tree. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em tree} & The parse tree to traverse \\
+\hline
+\mbox{\tt in}  & {\em params} & The params to modify during traversal and parameters for the action method \\
+\hline
+\mbox{\tt in}  & {\em action} & The node-\/visitor action to take on a parse tree node. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The modified tree and params 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about any exceptions here 
+\end{DoxyNote}
+
+
+Definition at line 245 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2da4b924eb6df43476c4294480403036}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!set\-\_\-position\-\_\-to\-\_\-id@{set\-\_\-position\-\_\-to\-\_\-id}}
+\index{set\-\_\-position\-\_\-to\-\_\-id@{set\-\_\-position\-\_\-to\-\_\-id}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{set\-\_\-position\-\_\-to\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-set\-\_\-position\-\_\-to\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a2da4b924eb6df43476c4294480403036}
+
+
+Node-\/visitor action to set the I\-D of a parse-\/tree node, to its position as determined by some traversal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The node being visited \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters used to set the id.  params\mbox{[}'pos'\mbox{]} $>$= 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated node and params\mbox{[}'pos'\mbox{]}. Really, node and params should be in,out parameters and we should return None. 
+\end{DoxyReturn}
+
+
+Definition at line 137 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aa6b48b4fe2accbcf2e1c0ad74a224841}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!treedist@{treedist}}
+\index{treedist@{treedist}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{treedist}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-treedist (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_aa6b48b4fe2accbcf2e1c0ad74a224841}
+
+
+Computes the tree distance matrix between the subtree rooted at node i in tree 1 and node j in tree 2. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The position of the last node in subtree 1 (position defined by postorder traversal) \\
+\hline
+{\em i} & The position of the last node in subtree 2 (position defined by postorder traversal) \\
+\hline
+{\em params} & Parameters required by Zhang-\/\-Shasha  params\mbox{[}'gamma'\mbox{]} != None as this is a function pointer to the edit-\/operation cost function.  params\mbox{[}'update\-\_\-edit\-\_\-cost'\mbox{]} != None as this contains our edit costs associated with updating the label of node i' to the label of node j'.  params\mbox{[}'insert\-\_\-edit\-\_\-cost'\mbox{]} != None  params\mbox{[}'delete\-\_\-edit\-\_\-cost'\mbox{]} != None  params\mbox{[}'tree\-\_\-dist'\mbox{]} != None, this is the tree distance matrix that we update in the Zhang Shasha Algorithm as we iterate through the L\-R\-\_\-keyroots in each parse tree  params\mbox{[}'edit\-\_\-ops'\mbox{]} != None  params\mbox{[}'forest\-\_\-dist'\mbox{]} != None. This contains the distance between the forest induced by all nodes whose positions $<$= i and the forest induced by all nodes whose positions are $<$= j \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Updated params mentioned above. Most notably, the tree distance between the subtrees rooted at nodes i and j. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about exceptions carefully... 
+\end{DoxyNote}
+
+
+Definition at line 364 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a80ae16ae164243f0f122efbe2f3dc19c}{\index{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}!unit\-\_\-cost@{unit\-\_\-cost}}
+\index{unit\-\_\-cost@{unit\-\_\-cost}!xutools::distances::ZhangShashaTreeDist@{xutools\-::distances\-::\-Zhang\-Shasha\-Tree\-Dist}}
+\subsubsection[{unit\-\_\-cost}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Zhang\-Shasha\-Tree\-Dist.\-unit\-\_\-cost (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{operation, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_zhang_shasha_tree_dist_a80ae16ae164243f0f122efbe2f3dc19c}
+
+
+Edit-\/cost function\-: Given an operation, compute the cost of that operation. 
+
+In this cost function, deletes and inserts of nodes in tree 1 and tree 2 respectively cost 1. Updates of a node may cost 0 iff the labels of the two nodes are identical, otherwise, cost is 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The position of the node to compare in tree 1 \\
+\hline
+{\em j} & The position of the node to compare in tree 2 \\
+\hline
+{\em operation} & The operation for which to compute the cost \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The cost of the edit operation 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Think about exceptions here 
+\end{DoxyNote}
+
+
+Definition at line 272 of file distances.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/distances.\-py\end{DoxyCompactItemize}

@@ -1,0 +1,233 @@
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser}{\section{xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser Class Reference}
+\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser}\index{xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser@{xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser}}
+}
+
+
+The \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser}{Cisco\-I\-O\-S\-Parser} class is used to parse Cisco I\-O\-S files encoded in T\-E\-I-\/\-X\-M\-L.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a7b91f534ff7939f0816424df94c4173d}{get\-Region\-I\-D}
+\begin{DoxyCompactList}\small\item\em Given a parse tree node for a text region, return the corresponding I\-D. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a3156eda3722d12fba7b6e2eda911f0ce}{get\-Grammar\-For\-Unit}
+\begin{DoxyCompactList}\small\item\em Retrieve a production by reference. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ad06a64ca65d9cd9252322951cd999163}{get\-Original\-Text}
+\begin{DoxyCompactList}\small\item\em Extract all occurrences of strings in the language of the production from the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abd5b825dc730891907b538ac00c5bfb3}{normalize\-Parse\-Tree}
+\begin{DoxyCompactList}\small\item\em Take a parse object and put it into a canoncial parse tree representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a46030d7d96a961a3730bf3d88348ccaa}{tuple {\bfseries class\-Map\-Start} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a46030d7d96a961a3730bf3d88348ccaa}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ac216bca49789fa8b75313142bdafe0d7}{tuple {\bfseries policy\-Map\-Start} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ac216bca49789fa8b75313142bdafe0d7}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a7ddfb4dfeb5bacbbdb9553aeb8a39592}{tuple {\bfseries vlan\-Start} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a7ddfb4dfeb5bacbbdb9553aeb8a39592}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_aedf90f4b44fcf25e67527cd02fadb8c0}{tuple {\bfseries interface\-Start} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_aedf90f4b44fcf25e67527cd02fadb8c0}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afa43f1d39c987069b6832068ce34955c}{tuple {\bfseries crypto\-Start} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afa43f1d39c987069b6832068ce34955c}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ae73071f6d66f25b4e5e412560972f995}{tuple {\bfseries block\-End} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ae73071f6d66f25b4e5e412560972f995}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_af897795f11b6d6999ae379bb011c8b29}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_af897795f11b6d6999ae379bb011c8b29}{line\-Region} = rest\-Of\-Line.\-set\-Whitespace\-Chars(' \textbackslash{}t')}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_af897795f11b6d6999ae379bb011c8b29}
+
+\begin{DoxyCompactList}\small\item\em This should not be used, instead use the builtin\-:line reference. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region} = Line\-Start()}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}
+
+\begin{DoxyCompactList}\small\item\em This should not be used, instead use builtin\-:line reference. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8ec65a187a6e9a9f9aa1474cebbba911}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8ec65a187a6e9a9f9aa1474cebbba911}{vlan\-Region} = vlan\-Start+Group( One\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region})) )}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8ec65a187a6e9a9f9aa1474cebbba911}
+
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S V\-L\-A\-Ns, reference is 'vlan'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a9e6d9c28d18016c8ec18503b707d0b3e}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a9e6d9c28d18016c8ec18503b707d0b3e}{interface\-Region} = interface\-Start+Group( One\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region})) )}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a9e6d9c28d18016c8ec18503b707d0b3e}
+
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S interfaces, reference is 'interface'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abba505010cea84487f03405b4ab06864}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abba505010cea84487f03405b4ab06864}{crypto\-Region} = crypto\-Start+Group( Zero\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region})) )}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abba505010cea84487f03405b4ab06864}
+
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S crypto blocks, reference is 'crypto'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a51bd4a694aa0ffb674688e5755e19dd4}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a51bd4a694aa0ffb674688e5755e19dd4}{class\-Map\-Region} = class\-Map\-Start+Group( Zero\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region})) )}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a51bd4a694aa0ffb674688e5755e19dd4}
+
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S class-\/maps, reference is 'classmap'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a87ba65e78a4d64e3944da2bc7be377b0}{tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a87ba65e78a4d64e3944da2bc7be377b0}{policy\-Map\-Region} = policy\-Map\-Start+Group( Zero\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_afd57a8ec6b65941a62ef834f94e4bdd0}{indented\-Line\-Region})) )}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a87ba65e78a4d64e3944da2bc7be377b0}
+
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S policy-\/maps, reference is 'policymap'. \end{DoxyCompactList}\item 
+tuple \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8c7dfc0e81b2f3828cb64c831977c569}{config\-File\-Region} = Group( One\-Or\-More( Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a9e6d9c28d18016c8ec18503b707d0b3e}{interface\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abba505010cea84487f03405b4ab06864}{crypto\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8ec65a187a6e9a9f9aa1474cebbba911}{vlan\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a51bd4a694aa0ffb674688e5755e19dd4}{class\-Map\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a87ba65e78a4d64e3944da2bc7be377b0}{policy\-Map\-Region}) ) )
+\begin{DoxyCompactList}\small\item\em Production for Cisco I\-O\-S config files, the entire file. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a1025c4a397e18ca768c1aa25283b2640}{string {\bfseries ref\-Key} = \char`\"{}label\char`\"{}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a1025c4a397e18ca768c1aa25283b2640}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1parsers_1_1_cisco_i_o_s_parser}{Cisco\-I\-O\-S\-Parser} class is used to parse Cisco I\-O\-S files encoded in T\-E\-I-\/\-X\-M\-L. 
+
+\begin{DoxyNote}{Note}
+The grammar reference is 'ios' 
+\end{DoxyNote}
+
+
+Definition at line 294 of file parsers.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a3156eda3722d12fba7b6e2eda911f0ce}{\index{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}!get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}}
+\index{get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}!xutools::parsers::CiscoIOSParser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}}
+\subsubsection[{get\-Grammar\-For\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser.\-get\-Grammar\-For\-Unit (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{report\-\_\-unit}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a3156eda3722d12fba7b6e2eda911f0ce}
+
+
+Retrieve a production by reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em report\-\_\-unit} & This is the production reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the production 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 394 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ad06a64ca65d9cd9252322951cd999163}{\index{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}!get\-Original\-Text@{get\-Original\-Text}}
+\index{get\-Original\-Text@{get\-Original\-Text}!xutools::parsers::CiscoIOSParser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}}
+\subsubsection[{get\-Original\-Text}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser.\-get\-Original\-Text (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{grammar, }
+\item[{}]{text, }
+\item[{}]{match}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_ad06a64ca65d9cd9252322951cd999163}
+
+
+Extract all occurrences of strings in the language of the production from the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grammar} & The production\-Object, this should be a production reference \\
+\hline
+{\em text} & The string from which to extract occurrences \\
+\hline
+{\em match} & Not sure what this is doing or why necessary \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of strings in the language of this production from the text. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about Exceptions? Should we be returning tokens instead so that we can support highlighting, etc? 
+\end{DoxyNote}
+
+
+Definition at line 426 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a7b91f534ff7939f0816424df94c4173d}{\index{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}!get\-Region\-I\-D@{get\-Region\-I\-D}}
+\index{get\-Region\-I\-D@{get\-Region\-I\-D}!xutools::parsers::CiscoIOSParser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}}
+\subsubsection[{get\-Region\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser.\-get\-Region\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{subtree\-\_\-parse, }
+\item[{}]{region\-\_\-type, }
+\item[{}]{subtree\-\_\-idx}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a7b91f534ff7939f0816424df94c4173d}
+
+
+Given a parse tree node for a text region, return the corresponding I\-D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subtree\-\_\-parse} & the parse tree node \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-type} & the type of the node \\
+\hline
+\mbox{\tt in,out}  & {\em subtree\-\_\-idx} & a node index determined by tree traversal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string that encodes the region I\-D 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & the production reference is not recognized \\
+\hline
+{\em Malformed\-Parse\-Tree} & the parse tree has an unexpected format \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyNote}{Note}
+If we return None, then a number gets assigned that starts at 1 since files start with line 1. This is hackish, figure out a nice interface. 
+\end{DoxyNote}
+
+
+Definition at line 358 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abd5b825dc730891907b538ac00c5bfb3}{\index{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}!normalize\-Parse\-Tree@{normalize\-Parse\-Tree}}
+\index{normalize\-Parse\-Tree@{normalize\-Parse\-Tree}!xutools::parsers::CiscoIOSParser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}}
+\subsubsection[{normalize\-Parse\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser.\-normalize\-Parse\-Tree (
+\begin{DoxyParamCaption}
+\item[{}]{parse\-\_\-tree\-\_\-list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_abd5b825dc730891907b538ac00c5bfb3}
+
+
+Take a parse object and put it into a canoncial parse tree representation. 
+
+Rethink this interface in terms of the X\-U\-Tools (space and time complexity) and also in terms of extant libraries such as libaugeas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parse\-\_\-tree\-\_\-list} & The list of parse trees that resulted from parsing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the normalized parse tree 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+think about how to do this more generally in a language-\/agnostic way 
+\end{DoxyNote}
+
+
+Definition at line 446 of file parsers.\-py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8c7dfc0e81b2f3828cb64c831977c569}{\index{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}!config\-File\-Region@{config\-File\-Region}}
+\index{config\-File\-Region@{config\-File\-Region}!xutools::parsers::CiscoIOSParser@{xutools\-::parsers\-::\-Cisco\-I\-O\-S\-Parser}}
+\subsubsection[{config\-File\-Region}]{\setlength{\rightskip}{0pt plus 5cm}tuple xutools.\-parsers.\-Cisco\-I\-O\-S\-Parser.\-config\-File\-Region = Group( One\-Or\-More( Group({\bf interface\-Region}) $|$ Group({\bf crypto\-Region}) $|$ Group({\bf vlan\-Region}) $|$ Group({\bf class\-Map\-Region}) $|$ Group({\bf policy\-Map\-Region}) ) )\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_cisco_i_o_s_parser_a8c7dfc0e81b2f3828cb64c831977c569}
+
+
+Production for Cisco I\-O\-S config files, the entire file. 
+
+reference is 'config' 
+
+Definition at line 343 of file parsers.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/parsers.\-py\end{DoxyCompactItemize}

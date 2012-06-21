@@ -1,0 +1,107 @@
+\hypertarget{classxutools_1_1parsers_1_1_builtin_parser}{\section{xutools.\-parsers.\-Builtin\-Parser Class Reference}
+\label{classxutools_1_1parsers_1_1_builtin_parser}\index{xutools.\-parsers.\-Builtin\-Parser@{xutools.\-parsers.\-Builtin\-Parser}}
+}
+
+
+The \hyperlink{classxutools_1_1parsers_1_1_builtin_parser}{Builtin\-Parser} class contains frequently-\/used constructs.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_builtin_parser_abe8119b777818e88da1670babca58494}{get\-Region\-I\-D}
+\begin{DoxyCompactList}\small\item\em Given a parse tree node for a text region, return the corresponding I\-D. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_builtin_parser_ab68a04dc8b0eb93984418b76989ffac0}{get\-Grammar\-For\-Unit}
+\begin{DoxyCompactList}\small\item\em Retrieve a production by reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_builtin_parser_ae151c98d03cc27876a18d44ded16f4ba}{tuple \hyperlink{classxutools_1_1parsers_1_1_builtin_parser_ae151c98d03cc27876a18d44ded16f4ba}{line\-Region} = rest\-Of\-Line.\-set\-Whitespace\-Chars(' \textbackslash{}t')}\label{classxutools_1_1parsers_1_1_builtin_parser_ae151c98d03cc27876a18d44ded16f4ba}
+
+\begin{DoxyCompactList}\small\item\em Production for lines, reference is 'line'. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1parsers_1_1_builtin_parser}{Builtin\-Parser} class contains frequently-\/used constructs. 
+
+\begin{DoxyNote}{Note}
+The grammar reference is 'builtin' 
+\end{DoxyNote}
+
+
+Definition at line 256 of file parsers.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_builtin_parser_ab68a04dc8b0eb93984418b76989ffac0}{\index{xutools\-::parsers\-::\-Builtin\-Parser@{xutools\-::parsers\-::\-Builtin\-Parser}!get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}}
+\index{get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}!xutools::parsers::BuiltinParser@{xutools\-::parsers\-::\-Builtin\-Parser}}
+\subsubsection[{get\-Grammar\-For\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Builtin\-Parser.\-get\-Grammar\-For\-Unit (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{region\-\_\-type}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_builtin_parser_ab68a04dc8b0eb93984418b76989ffac0}
+
+
+Retrieve a production by reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em report\-\_\-unit} & This is the production reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the production 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 282 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_builtin_parser_abe8119b777818e88da1670babca58494}{\index{xutools\-::parsers\-::\-Builtin\-Parser@{xutools\-::parsers\-::\-Builtin\-Parser}!get\-Region\-I\-D@{get\-Region\-I\-D}}
+\index{get\-Region\-I\-D@{get\-Region\-I\-D}!xutools::parsers::BuiltinParser@{xutools\-::parsers\-::\-Builtin\-Parser}}
+\subsubsection[{get\-Region\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Builtin\-Parser.\-get\-Region\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{subtree\-\_\-parse, }
+\item[{}]{region\-\_\-type, }
+\item[{}]{subtree\-\_\-idx}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_builtin_parser_abe8119b777818e88da1670babca58494}
+
+
+Given a parse tree node for a text region, return the corresponding I\-D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subtree\-\_\-parse} & the parse tree node \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-type} & the type of the node \\
+\hline
+\mbox{\tt in,out}  & {\em subtree\-\_\-idx} & a node index determined by a tree traversal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string that encodes the region I\-D 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & the production reference is not recognized \\
+\hline
+{\em Malformed\-Parse\-Tree} & the parse tree has an unexpected format \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 269 of file parsers.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/parsers.\-py\end{DoxyCompactItemize}

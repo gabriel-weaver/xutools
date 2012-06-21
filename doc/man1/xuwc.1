@@ -1,0 +1,96 @@
+.\" Process this file with 
+.\" groff -man -Tascii xuwc.1
+.\"
+.TH XUWC 1 "June 2012" XUTools "User Manuals"
+.SH NAME 
+xuwc \- Count the number of strings in the language of a grammar production
+
+.SH SYNOPSIS
+.B  xuwc 
+.B [ 
+.I --count 
+.B ]
+.B [ 
+.I --re_count 
+.B ]
+.B [ 
+.I --context
+.B ]
+.B [ 
+.I --re_context
+.B ]
+.I xupath
+.I file
+.B ...
+
+.SH DESCRIPTION
+xuwc(1) 
+generalizes 
+.BR wc(1) 
+to count the number of strings in the language
+of an xupath.  
+
+Traditional 
+.BR wc(1) 
+counts the number of words, lines, characters, or
+bytes contained in each input file or standard input.  
+
+xuwc(1) generalizes 
+.BR wc(1) 
+to count strings in the language of an xupath
+and to report those counts relative to language-specific contexts.
+
+The xupath specifies the strings to count as well as the context in
+which to report counts.  When no options are specified, 
+.BR xuwc(1) 
+will count the number of matches to the xupath within the file.  
+
+All files are processed in the order specified.
+
+.SH OPTIONS
+.IP --count
+The production references that we should count.  By default, this is
+the final step in the provided xupath.  However, this may also be set
+to builtin:byte, builtin:character, builtin:word, or builtin:line.  
+
+.IP --count_regexp
+Count the number of occurrences in the language of this regular
+expression.  We currently use Python regular expressions but this may
+change.  
+
+.IP --context
+The context in which to report counts.  By default, this is the file.
+However, it could be any step of the xupath.  If one uses the count
+option, however, context should be set to the final step in
+the xupath
+
+.IP --re_context
+One could imagine (emphasis on imagine) specifying a regular
+expression that defines a context in which to report counts.  This is
+not implemented.
+
+.SH FILES
+Currently, the 
+xuwc(1) 
+command operates on hard-coded grammars.  In
+future releases, however, it will operate on grammars in the XUPATH.
+
+.SH ENVIRONMENT
+.IP XUPATH
+The path at which the xutools grammar library resides
+
+.SH DIAGNOSTICS
+Currently there are no error codes.  In future releases, however, we
+will be thinking more carefully about error codes and how to report
+these errors back to the calling environment.
+
+.SH BUGS
+There are likely plenty as this is the first release of xuwc(1).
+
+.SH AUTHOR
+Gabriel A. Weaver <Gabriel.A.Weaver at xutools dot com>
+
+.SH SEE ALSO
+.BR wc(1),
+.BR xudiff(1),
+.BR xugrep(1)

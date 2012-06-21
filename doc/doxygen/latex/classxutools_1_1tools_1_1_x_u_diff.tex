@@ -1,0 +1,514 @@
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff}{\section{xutools.\-tools.\-X\-U\-Diff Class Reference}
+\label{classxutools_1_1tools_1_1_x_u_diff}\index{xutools.\-tools.\-X\-U\-Diff@{xutools.\-tools.\-X\-U\-Diff}}
+}
+
+
+The \hyperlink{classxutools_1_1tools_1_1_x_u_diff}{X\-U\-Diff} class implements xudiff.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a32ae7725526ae8bc87a40143b417c987}{xudiff}
+\begin{DoxyCompactList}\small\item\em Method that actually processes the xupath query and generates a difference report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_aa7bb458dcc56e8ab717b805913fed32c}{process\-\_\-xpath}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that processes the node of type 'xpath' when generating an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_ace2c8ff5ab3a60e528e7eb82e5fadbc8}{process\-\_\-step}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that processes the node of type 'step' to generate an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a145d44b7f5c094752ca5382fea77f614}{process\-\_\-next\-\_\-steps}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that processes the node of type 'next\-\_\-steps' to generate an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a7bf9e28759bc729b4327f8f7dc7e92e4}{process\-\_\-cf\-\_\-match}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that processes the node of type 'cf\-\_\-match' to generate an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a9ad24f24b4d5dd5fbccb4e85d8d72c59}{process\-\_\-re\-\_\-match}
+\begin{DoxyCompactList}\small\item\em Node-\/\-Visitor action to take on a parse tree node of type 're\-\_\-match' when we generate an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_aeae8f83ca57a6c0686e86bd863c19068}{process\-\_\-predicate}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action to take on a parse tree node of type 'predicate' when we generate an xudiff report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a3728a1ca2768d8870dbf54f3e3e6fb85}{get\-\_\-parser}
+\begin{DoxyCompactList}\small\item\em Retrieve a grammar by reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_ad1ac79030ee11d7733cf5dc1c5ab6162}{set\-\_\-position\-\_\-as\-\_\-id}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that sets the identifier of the parse-\/tree node to the position, as determined by a traversal. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a8d405b9d898a7bebc0711943cb765b0a}{compute\-\_\-type\-\_\-list}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that computes a 'pos2type' mapping from a traversal position to a node type. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_af0b107fc31d8a9586129f0a3c0b733ab}{compute\-\_\-references}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that computes a reference string for every node in the parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a393f4260ff446a711ee29f47fc1544d8}{compute\-\_\-reference\-\_\-list}
+\begin{DoxyCompactList}\small\item\em Node-\/visitor action that computes a 'pos2ref' mapping from a traversal position to a node type. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a2bafde0d31570449f1be4edd63eb6372}{output\-\_\-edit\-\_\-script}
+\begin{DoxyCompactList}\small\item\em Method used to report an edit script from the dynamic programming matrices computed by Zhang and Shasha. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_diff_a52ed76c34d2213135ed1395ef2cab753}{xudiff\-\_\-main}
+\begin{DoxyCompactList}\small\item\em Method used by the command-\/line interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1tools_1_1_x_u_diff}{X\-U\-Diff} class implements xudiff. 
+
+
+
+Definition at line 526 of file tools.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a393f4260ff446a711ee29f47fc1544d8}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!compute\-\_\-reference\-\_\-list@{compute\-\_\-reference\-\_\-list}}
+\index{compute\-\_\-reference\-\_\-list@{compute\-\_\-reference\-\_\-list}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{compute\-\_\-reference\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-compute\-\_\-reference\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_a393f4260ff446a711ee29f47fc1544d8}
+
+
+Node-\/visitor action that computes a 'pos2ref' mapping from a traversal position to a node type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The parse-\/tree node whose 'ref' we grab. \\
+\hline
+\mbox{\tt in}  & {\em params} & The parameters used to update during the tree traversal. Here, we update params\mbox{[}'pos2ref'\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated parameters. The node is unaffected. Really, params should be an in,out parameter and we should return None 
+\end{DoxyReturn}
+
+
+Definition at line 605 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_af0b107fc31d8a9586129f0a3c0b733ab}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!compute\-\_\-references@{compute\-\_\-references}}
+\index{compute\-\_\-references@{compute\-\_\-references}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{compute\-\_\-references}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-compute\-\_\-references (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_af0b107fc31d8a9586129f0a3c0b733ab}
+
+
+Node-\/visitor action that computes a reference string for every node in the parse tree. 
+
+This interface needs to be rethought. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The parse-\/tree node for which to generate a ref \\
+\hline
+\mbox{\tt in}  & {\em params} & Parameters used to help compute the reference, in this case, we make use of the params\mbox{[}'stack'\mbox{]} satellite data in order to understand location within the parse tree \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated node, which now has 'ref' satellite data associated with it. Params are also updated. Really, both node and params should be in,out parameters. 
+\end{DoxyReturn}
+
+
+Definition at line 586 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a8d405b9d898a7bebc0711943cb765b0a}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!compute\-\_\-type\-\_\-list@{compute\-\_\-type\-\_\-list}}
+\index{compute\-\_\-type\-\_\-list@{compute\-\_\-type\-\_\-list}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{compute\-\_\-type\-\_\-list}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-compute\-\_\-type\-\_\-list (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_a8d405b9d898a7bebc0711943cb765b0a}
+
+
+Node-\/visitor action that computes a 'pos2type' mapping from a traversal position to a node type. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The parse-\/tree node to process \\
+\hline
+\mbox{\tt in}  & {\em params} & Parameters to update during the tree traversal. Here, we update params\mbox{[}'pos2type'\mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated parameters. The node is unaffected. really, params should be an in,out parameter 
+\end{DoxyReturn}
+
+
+Definition at line 565 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a3728a1ca2768d8870dbf54f3e3e6fb85}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!get\-\_\-parser@{get\-\_\-parser}}
+\index{get\-\_\-parser@{get\-\_\-parser}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{get\-\_\-parser}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-get\-\_\-parser (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gname}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_a3728a1ca2768d8870dbf54f3e3e6fb85}
+
+
+Retrieve a grammar by reference. 
+
+I think that this should really live in the Parser module.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gname} & This is the grammar reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Parser for the given grammar reference 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Grammar\-Ref} & the grammar reference is not recognized \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 910 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a2bafde0d31570449f1be4edd63eb6372}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!output\-\_\-edit\-\_\-script@{output\-\_\-edit\-\_\-script}}
+\index{output\-\_\-edit\-\_\-script@{output\-\_\-edit\-\_\-script}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{output\-\_\-edit\-\_\-script}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-output\-\_\-edit\-\_\-script (
+\begin{DoxyParamCaption}
+\item[{}]{i, }
+\item[{}]{j, }
+\item[{}]{small\-\_\-leaf1, }
+\item[{}]{small\-\_\-leaf2, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_a2bafde0d31570449f1be4edd63eb6372}
+
+
+Method used to report an edit script from the dynamic programming matrices computed by Zhang and Shasha. 
+
+This edit script is annotated with grammar-\/specific information
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em i} & The largest 'version 1' leaf position (postorder traversal) \\
+\hline
+\mbox{\tt in}  & {\em j} & The largest 'version 2' leaf position (preorder traversal) \\
+\hline
+\mbox{\tt in}  & {\em small\-\_\-leaf1} & \\
+\hline
+\mbox{\tt in}  & {\em small\-\_\-leaf2} & \\
+\hline
+\mbox{\tt in}  & {\em params} & Parameters necessary to output an edit script\\
+\hline
+\end{DoxyParams}
+params\mbox{[}'pos2types0'\mbox{]}
+
+params\mbox{[}'pos2types1'\mbox{]}
+
+params\mbox{[}'pos2refs0'\mbox{]}
+
+params\mbox{[}'pos2refs1'\mbox{]} \begin{DoxyReturn}{Returns}
+An edit script to output 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Edit\-Operation} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 625 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a7bf9e28759bc729b4327f8f7dc7e92e4}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-cf\-\_\-match@{process\-\_\-cf\-\_\-match}}
+\index{process\-\_\-cf\-\_\-match@{process\-\_\-cf\-\_\-match}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-cf\-\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-cf\-\_\-match (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{cf\-\_\-match, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_a7bf9e28759bc729b4327f8f7dc7e92e4}
+
+
+Node-\/visitor action that processes the node of type 'cf\-\_\-match' to generate an xudiff report. 
+
+Here we apply the production associated with the reference in this cf\-\_\-match node and compare the two parse trees using Zhang and Shasha's algorithm.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em cf\-\_\-match} & The 'cf\-\_\-match' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level in the parse tree. \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report  If the 'cf\-\_\-match' node is None or empty, then we've reached a base case on recursion. Just return the report 
+\end{DoxyReturn}
+
+
+Definition at line 832 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a145d44b7f5c094752ca5382fea77f614}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-next\-\_\-steps@{process\-\_\-next\-\_\-steps}}
+\index{process\-\_\-next\-\_\-steps@{process\-\_\-next\-\_\-steps}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-next\-\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-next\-\_\-steps (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{next\-\_\-steps, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_a145d44b7f5c094752ca5382fea77f614}
+
+
+Node-\/visitor action that processes the node of type 'next\-\_\-steps' to generate an xudiff report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em next\-\_\-steps} & The 'next\-\_\-steps' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level in the parse tree. Perhaps we should replace this with a depth param \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report  If the 'next\-\_\-steps' node is None or empty, then we've reached a base case on recursion. Just return the report 
+\end{DoxyReturn}
+
+
+Definition at line 809 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_aeae8f83ca57a6c0686e86bd863c19068}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-predicate@{process\-\_\-predicate}}
+\index{process\-\_\-predicate@{process\-\_\-predicate}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-predicate}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-predicate (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{predicate, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_aeae8f83ca57a6c0686e86bd863c19068}
+
+
+Node-\/visitor action to take on a parse tree node of type 'predicate' when we generate an xudiff report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em predicate} & The 'predicate' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report that was input. 
+\end{DoxyReturn}
+
+
+Definition at line 896 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a9ad24f24b4d5dd5fbccb4e85d8d72c59}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-re\-\_\-match@{process\-\_\-re\-\_\-match}}
+\index{process\-\_\-re\-\_\-match@{process\-\_\-re\-\_\-match}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-re\-\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-re\-\_\-match (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{re\-\_\-match, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_a9ad24f24b4d5dd5fbccb4e85d8d72c59}
+
+
+Node-\/\-Visitor action to take on a parse tree node of type 're\-\_\-match' when we generate an xudiff report. 
+
+When we process a regular expression match, we just return the report currently this is meaningless.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em re\-\_\-match} & The 're\-\_\-match' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level in the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report, unaltered 
+\end{DoxyReturn}
+
+
+Definition at line 883 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_ace2c8ff5ab3a60e528e7eb82e5fadbc8}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-step@{process\-\_\-step}}
+\index{process\-\_\-step@{process\-\_\-step}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-step (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{step, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_ace2c8ff5ab3a60e528e7eb82e5fadbc8}
+
+
+Node-\/visitor action that processes the node of type 'step' to generate an xudiff report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em step} & The 'step' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report  If the 'step' node is None or empty, then we've reached a base case on recursion. Just return the report. 
+\end{DoxyReturn}
+
+
+Definition at line 790 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_aa7bb458dcc56e8ab717b805913fed32c}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!process\-\_\-xpath@{process\-\_\-xpath}}
+\index{process\-\_\-xpath@{process\-\_\-xpath}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{process\-\_\-xpath}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-process\-\_\-xpath (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{xpath, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_aa7bb458dcc56e8ab717b805913fed32c}
+
+
+Node-\/visitor action that processes the node of type 'xpath' when generating an xudiff report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em xpath} & The 'xpath' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xudiff report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xudiff report that contains an edit script between the parse trees that result from applying an xupath to the input files  If the 'xpath' node is None or empty, then we've reached a base case on recursion. Just return the report 
+\end{DoxyReturn}
+
+
+Definition at line 772 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_ad1ac79030ee11d7733cf5dc1c5ab6162}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!set\-\_\-position\-\_\-as\-\_\-id@{set\-\_\-position\-\_\-as\-\_\-id}}
+\index{set\-\_\-position\-\_\-as\-\_\-id@{set\-\_\-position\-\_\-as\-\_\-id}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{set\-\_\-position\-\_\-as\-\_\-id}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-set\-\_\-position\-\_\-as\-\_\-id (
+\begin{DoxyParamCaption}
+\item[{}]{node, }
+\item[{}]{params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_ad1ac79030ee11d7733cf5dc1c5ab6162}
+
+
+Node-\/visitor action that sets the identifier of the parse-\/tree node to the position, as determined by a traversal. 
+
+The Zhang \& Shasha Tree Editing Distance algorithm uses a postorder traversal. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em node} & The parse-\/tree node to process \\
+\hline
+\mbox{\tt in}  & {\em params} & Parameters to update during the tree traversal. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated node and parameters. Really both node and params should turn into in,out parameters 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Do we ever use the 'id\-\_\-attr' attribute elsewhere? This may be unnecessary satellite data 
+\end{DoxyNote}
+
+
+Definition at line 539 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a32ae7725526ae8bc87a40143b417c987}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!xudiff@{xudiff}}
+\index{xudiff@{xudiff}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{xudiff}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-xudiff (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x\-Path, }
+\item[{}]{report, }
+\item[{}]{init\-\_\-params}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_diff_a32ae7725526ae8bc87a40143b417c987}
+
+
+Method that actually processes the xupath query and generates a difference report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em x\-Path} & The xupath used to generate one parse tree from the files \\
+\hline
+\mbox{\tt in}  & {\em report} & The xudiff report, should be in,out \\
+\hline
+\mbox{\tt in}  & {\em init\-\_\-params} & T\-B\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the difference report 
+\end{DoxyReturn}
+
+
+Definition at line 734 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_diff_a52ed76c34d2213135ed1395ef2cab753}{\index{xutools\-::tools\-::\-X\-U\-Diff@{xutools\-::tools\-::\-X\-U\-Diff}!xudiff\-\_\-main@{xudiff\-\_\-main}}
+\index{xudiff\-\_\-main@{xudiff\-\_\-main}!xutools::tools::XUDiff@{xutools\-::tools\-::\-X\-U\-Diff}}
+\subsubsection[{xudiff\-\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Diff.\-xudiff\-\_\-main (
+\begin{DoxyParamCaption}
+\item[{}]{xpath, }
+\item[{}]{file\-\_\-paths, }
+\item[{}]{count\-\_\-type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_diff_a52ed76c34d2213135ed1395ef2cab753}
+
+
+Method used by the command-\/line interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xpath} & The xupath query that specifies a result set to count \\
+\hline
+\mbox{\tt in}  & {\em file\-\_\-paths} & The files to compare \\
+\hline
+\mbox{\tt in}  & {\em count\-\_\-type} & The cost function to use when evaluating edit operations \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+parameters to output an edit script
+\end{DoxyReturn}
+params\mbox{[}'pos2types0'\mbox{]}
+
+params\mbox{[}'pos2types1'\mbox{]}
+
+params\mbox{[}'pos2refs0'\mbox{]}
+
+params\mbox{[}'pos2refs1'\mbox{]}
+
+params\mbox{[}'(update$|$delete$|$insert)\-\_\-edit\-\_\-cost'\mbox{]}
+
+params\mbox{[}'edit\-\_\-ops'\mbox{]} Matrix of edit operations
+
+params\mbox{[}'forest\-\_\-dist'\mbox{]} Distance matrix between parse trees 
+
+Definition at line 686 of file tools.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/tools.\-py\end{DoxyCompactItemize}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title/>
+      </titleStmt>
+      <publicationStmt>
+        <p>fill in</p>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Digital edition</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div n="1" type="section">
+        <tei:head xmlns:tei="http://www.tei-c.org/ns/1.0" n="title" ana="section">1 INTRODUCTION</tei:head>
+        <tei:p xmlns:tei="http://www.tei-c.org/ns/1.0" n="p1" ana="section">1.Introduction This document is structured according to RFC 2527 [RFC2527]. Not all sections of RFC2527 are used. Sections that are not included have a default value of “No stipulation”. This document describes the set of rules and procedures established by the AIST GRID CA Policy management Authority for the operations of the AIST GRID PKI service.</tei:p>
+        <div n="1" type="subsection">
+          <tei:head xmlns:tei="http://www.tei-c.org/ns/1.0" n="title" ana="subsection">1.1 OverView</tei:head>
+          <tei:p xmlns:tei="http://www.tei-c.org/ns/1.0" n="p1" ana="subsection">This document will include both the Certificate Policy and the Certification Practices Statement for the AIST GRID CA. It is the intent of the AIST GRIDS PKI to issue Identity and server certificates for use in Grids. These certificates are for AIST researchers and their colleagues. These certificates will be compatible with the Globus and UNICORE middleware that are used on these Grids. The AIST GRIDS PKI is based on Naregi (National Research Grid Initiative) Certificate Management System</tei:p>
+          <div n="2" type="subsubsection">
+            <tei:head xmlns:tei="http://www.tei-c.org/ns/1.0" n="title" ana="subsubsection">1.1.2 Related specification</tei:head>
+            <tei:p xmlns:tei="http://www.tei-c.org/ns/1.0" n="p1" ana="subsubsection">None</tei:p>
+            <tei:p xmlns:tei="http://www.tei-c.org/ns/1.0" n="p1" ana="subsubsection">None</tei:p>
+          </div>
+	</div>
+      </div>
+      <div n="9" type="section">
+        <tei:head xmlns:tei="http://www.tei-c.org/ns/1.0" n="title" ana="section">9. Glossary</tei:head>
+        <tei:p xmlns:tei="http://www.tei-c.org/ns/1.0" n="p2" ana="section">36</tei:p>
+      </div>
+    </body>
+  </text>
+</TEI>

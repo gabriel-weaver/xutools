@@ -1,0 +1,27 @@
+xutools/
+	__init__.py
+	distances.py
+	parsers.py
+	tools.py
+	cmd/			Subpackage for CLI
+		__init__.py
+		xudiff
+		xugrep
+		xuwc
+
+	test/			Subpackage for tests
+		__init__.py
+		test_distances.py
+		test_parsers.py
+		test_tools.py
+
+		data/	
+			__init__.py
+		 	teilite/
+				section.tei.xml
+			nvd_xml/
+				nvdcve_sample.xml
+			cisco_ios/
+				router.example
+			c_code/
+				example2.c

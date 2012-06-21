@@ -1,0 +1,219 @@
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser}{\section{xutools.\-parsers.\-X\-Path\-Parser Class Reference}
+\label{classxutools_1_1parsers_1_1_x_path_parser}\index{xutools.\-parsers.\-X\-Path\-Parser@{xutools.\-parsers.\-X\-Path\-Parser}}
+}
+
+
+The \hyperlink{classxutools_1_1parsers_1_1_x_path_parser}{X\-Path\-Parser} class is used to parse xupath expressions.  
+
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_ab00288a4a70d10d079cf2e6ed771c233}{print\-\_\-xpath}
+\begin{DoxyCompactList}\small\item\em Action to take a tnode of type 'xpath' when printing xpath parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_ad75595ece121f86d16d784636ffdf96c}{print\-\_\-step}
+\begin{DoxyCompactList}\small\item\em Action to take at node of type 'step' when printing xpath parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_a6a04eb60bf1047384e7d24a11a4d217b}{print\-\_\-next\-\_\-steps}
+\begin{DoxyCompactList}\small\item\em Action to take at node of type 'next\-\_\-steps' when printing xpath parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_a82f70a03e8c82ebeadefa802fc921f26}{print\-\_\-cf\-\_\-match}
+\begin{DoxyCompactList}\small\item\em Action to take at node of type 'cf\-\_\-match' when printing xpath parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_a5434aa2861e3230a3e41ca81766c27b4}{print\-\_\-re\-\_\-match}
+\begin{DoxyCompactList}\small\item\em Action to take at node of type 're\-\_\-match' when printing xpath parse tree. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_x_path_parser_a7379879d11a15eee0f3b29e034d41a9f}{print\-\_\-predicate}
+\begin{DoxyCompactList}\small\item\em Action to take at node to type 'predicate' when printing xpath parse tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_aeefaed59c8c53cbd2af664b6abc6aa0e}{tuple {\bfseries N\-C\-Name} = Word( alphanums + '.-\/' )}\label{classxutools_1_1parsers_1_1_x_path_parser_aeefaed59c8c53cbd2af664b6abc6aa0e}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a646902ba4307457e0799379772507953}{tuple {\bfseries q\-Name} = Combine(N\-C\-Name + Literal('\-:') + N\-C\-Name)}\label{classxutools_1_1parsers_1_1_x_path_parser_a646902ba4307457e0799379772507953}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_ad27f986ed5578cf6dd41fc86086e8732}{tuple {\bfseries String\-Literal} = Literal(\char`\"{}'\char`\"{})}\label{classxutools_1_1parsers_1_1_x_path_parser_ad27f986ed5578cf6dd41fc86086e8732}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a638e977022020a59924c0d953f920493}{tuple {\bfseries regexpexpr} = Group( Combine( Literal(\char`\"{}re\-:testsubtree\char`\"{}) + Literal(\char`\"{}(\char`\"{}) ) + String\-Literal + Combine(Literal(\char`\"{},\char`\"{}) + String\-Literal + Literal(\char`\"{})\char`\"{}) ) )}\label{classxutools_1_1parsers_1_1_x_path_parser_a638e977022020a59924c0d953f920493}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a56ec81d6671f391e90a5ac490c867120}{tuple {\bfseries step\-Expr} = Forward()}\label{classxutools_1_1parsers_1_1_x_path_parser_a56ec81d6671f391e90a5ac490c867120}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a33eab7023ad4b6742c4faed8730c2982}{tuple {\bfseries expr} = regexpexpr+Group( Zero\-Or\-More( (Literal('/') $|$ Literal('//') ) + Group(step\-Expr) ) )}\label{classxutools_1_1parsers_1_1_x_path_parser_a33eab7023ad4b6742c4faed8730c2982}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_aef54c8382ad623182c8fa80f4464cf1c}{tuple {\bfseries predicate} = Literal('\mbox{[}')}\label{classxutools_1_1parsers_1_1_x_path_parser_aef54c8382ad623182c8fa80f4464cf1c}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_ababb9d35b3b3b166f16a5ecbc5d31844}{tuple {\bfseries abbrev\-Forward\-Step} = Optional( Literal('@') )}\label{classxutools_1_1parsers_1_1_x_path_parser_ababb9d35b3b3b166f16a5ecbc5d31844}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_aa9fb84d616460b60281211d8382a280e}{tuple {\bfseries relative\-Path\-Expr} = Group(step\-Expr)}\label{classxutools_1_1parsers_1_1_x_path_parser_aa9fb84d616460b60281211d8382a280e}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a7adbad39d3a104c526aba9c690c6b86a}{tuple {\bfseries path\-Expr} = ( Literal('//') + Group( Optional(relative\-Path\-Expr) ).set\-Results\-Name(\char`\"{}path\char`\"{}) )}\label{classxutools_1_1parsers_1_1_x_path_parser_a7adbad39d3a104c526aba9c690c6b86a}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_aa1ba2fd84d7d31d1d445573c1a4778b2}{{\bfseries x\-Path} = path\-Expr}\label{classxutools_1_1parsers_1_1_x_path_parser_aa1ba2fd84d7d31d1d445573c1a4778b2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1parsers_1_1_x_path_parser}{X\-Path\-Parser} class is used to parse xupath expressions. 
+
+This is a very limited implementation of the xpath syntax.
+
+\begin{DoxyNote}{Note}
+There is no reference string for this grammar 
+\end{DoxyNote}
+
+
+Definition at line 17 of file parsers.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a82f70a03e8c82ebeadefa802fc921f26}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-cf\-\_\-match@{print\-\_\-cf\-\_\-match}}
+\index{print\-\_\-cf\-\_\-match@{print\-\_\-cf\-\_\-match}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-cf\-\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-cf\-\_\-match (
+\begin{DoxyParamCaption}
+\item[{}]{cf\-\_\-match, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_a82f70a03e8c82ebeadefa802fc921f26}
+
+
+Action to take at node of type 'cf\-\_\-match' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cf\-\_\-match} & the node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 77 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a6a04eb60bf1047384e7d24a11a4d217b}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-next\-\_\-steps@{print\-\_\-next\-\_\-steps}}
+\index{print\-\_\-next\-\_\-steps@{print\-\_\-next\-\_\-steps}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-next\-\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-next\-\_\-steps (
+\begin{DoxyParamCaption}
+\item[{}]{next\-\_\-steps, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_a6a04eb60bf1047384e7d24a11a4d217b}
+
+
+Action to take at node of type 'next\-\_\-steps' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em next\-\_\-steps} & the node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 64 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a7379879d11a15eee0f3b29e034d41a9f}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-predicate@{print\-\_\-predicate}}
+\index{print\-\_\-predicate@{print\-\_\-predicate}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-predicate}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-predicate (
+\begin{DoxyParamCaption}
+\item[{}]{predicate, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_a7379879d11a15eee0f3b29e034d41a9f}
+
+
+Action to take at node to type 'predicate' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & the node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 97 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_a5434aa2861e3230a3e41ca81766c27b4}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-re\-\_\-match@{print\-\_\-re\-\_\-match}}
+\index{print\-\_\-re\-\_\-match@{print\-\_\-re\-\_\-match}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-re\-\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-re\-\_\-match (
+\begin{DoxyParamCaption}
+\item[{}]{re\-\_\-match, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_a5434aa2861e3230a3e41ca81766c27b4}
+
+
+Action to take at node of type 're\-\_\-match' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em re\-\_\-match} & the node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 87 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_ad75595ece121f86d16d784636ffdf96c}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-step@{print\-\_\-step}}
+\index{print\-\_\-step@{print\-\_\-step}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-step (
+\begin{DoxyParamCaption}
+\item[{}]{step, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_ad75595ece121f86d16d784636ffdf96c}
+
+
+Action to take at node of type 'step' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em step} & the step node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 52 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_x_path_parser_ab00288a4a70d10d079cf2e6ed771c233}{\index{xutools\-::parsers\-::\-X\-Path\-Parser@{xutools\-::parsers\-::\-X\-Path\-Parser}!print\-\_\-xpath@{print\-\_\-xpath}}
+\index{print\-\_\-xpath@{print\-\_\-xpath}!xutools::parsers::XPathParser@{xutools\-::parsers\-::\-X\-Path\-Parser}}
+\subsubsection[{print\-\_\-xpath}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-X\-Path\-Parser.\-print\-\_\-xpath (
+\begin{DoxyParamCaption}
+\item[{}]{xpath, }
+\item[{}]{indent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_x_path_parser_ab00288a4a70d10d079cf2e6ed771c233}
+
+
+Action to take a tnode of type 'xpath' when printing xpath parse tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xpath} & the 'xpath' node to visit \\
+\hline
+{\em indent} & the current indentation level of the output string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 41 of file parsers.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/parsers.\-py\end{DoxyCompactItemize}

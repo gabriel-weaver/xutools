@@ -1,0 +1,187 @@
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser}{\section{xutools.\-parsers.\-Subset\-C\-Parser Class Reference}
+\label{classxutools_1_1parsers_1_1_subset_c_parser}\index{xutools.\-parsers.\-Subset\-C\-Parser@{xutools.\-parsers.\-Subset\-C\-Parser}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_subset_c_parser_a8988b0c0214dafa8231cf22bedfe3103}{get\-Region\-I\-D}
+\begin{DoxyCompactList}\small\item\em Given a parse tree node for a text region, return the corresponding I\-D. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_subset_c_parser_a388d1177c97775ab9f1272145e26faeb}{get\-Grammar\-For\-Unit}
+\begin{DoxyCompactList}\small\item\em Retrieve a production by reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ab004e56225deb82d0e89f5968cf162ac}{tuple {\bfseries I\-N\-T} = Keyword(\char`\"{}int\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_ab004e56225deb82d0e89f5968cf162ac}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a0655ec243d8c8fbed09faadf87ac3e81}{tuple {\bfseries C\-H\-A\-R} = Keyword(\char`\"{}char\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a0655ec243d8c8fbed09faadf87ac3e81}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a2b2f67890f89d4f05b394e1e363e0a23}{tuple {\bfseries W\-H\-I\-L\-E} = Keyword(\char`\"{}while\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a2b2f67890f89d4f05b394e1e363e0a23}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a44979c47896de6e9dfd0fb5503d74c64}{tuple {\bfseries D\-O} = Keyword(\char`\"{}do\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a44979c47896de6e9dfd0fb5503d74c64}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_adcccb44537e8f224666d6df14bf7299b}{tuple {\bfseries I\-F} = Keyword(\char`\"{}if\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_adcccb44537e8f224666d6df14bf7299b}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a6ed20233d859b72417e5eb9c8bc2f4e2}{tuple {\bfseries E\-L\-S\-E} = Keyword(\char`\"{}else\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a6ed20233d859b72417e5eb9c8bc2f4e2}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a30695b5da46d2cca50dac3f6095586b7}{tuple {\bfseries R\-E\-T\-U\-R\-N} = Keyword(\char`\"{}return\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a30695b5da46d2cca50dac3f6095586b7}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a4fa9043f2d039d7247693f333684f0eb}{tuple {\bfseries N\-A\-M\-E} = Word(alphas+\char`\"{}\-\_\-\char`\"{}, alphanums+\char`\"{}\-\_\-\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a4fa9043f2d039d7247693f333684f0eb}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ab2dbd59c46ad9070b79976add75e76b8}{tuple {\bfseries integer} = Regex(r\char`\"{}\mbox{[}+-\/\mbox{]}?\textbackslash{}d+\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_ab2dbd59c46ad9070b79976add75e76b8}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a7066a9617bab540fdd20ac4cefed628a}{tuple {\bfseries char} = Regex(r\char`\"{}'.'\char`\"{})}\label{classxutools_1_1parsers_1_1_subset_c_parser_a7066a9617bab540fdd20ac4cefed628a}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ac594f8e636d9fc54b7e87c8e7c898dfb}{{\bfseries string\-\_\-} = dbl\-Quoted\-String}\label{classxutools_1_1parsers_1_1_subset_c_parser_ac594f8e636d9fc54b7e87c8e7c898dfb}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a6146a51c60e960ea0612e302c236f7e8}{tuple {\bfseries T\-Y\-P\-E} = Group((I\-N\-T $|$ C\-H\-A\-R ) + Zero\-Or\-More(\char`\"{}$\ast$\char`\"{}))}\label{classxutools_1_1parsers_1_1_subset_c_parser_a6146a51c60e960ea0612e302c236f7e8}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ac0e145ca427b2558b28a36e2964456d4}{tuple {\bfseries expr} = Forward()}\label{classxutools_1_1parsers_1_1_subset_c_parser_ac0e145ca427b2558b28a36e2964456d4}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a4ad9b750c0fc749996f18b6cbbe6def4}{{\bfseries operand} = N\-A\-M\-E$|$integer$|$char$|$string\-\_\-}\label{classxutools_1_1parsers_1_1_subset_c_parser_a4ad9b750c0fc749996f18b6cbbe6def4}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a4d5b8565a04bc20822c5c77478acf18a}{tuple {\bfseries stmt} = Forward()}\label{classxutools_1_1parsers_1_1_subset_c_parser_a4d5b8565a04bc20822c5c77478acf18a}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a9ef774258d0ba18706860b451a13a939}{tuple {\bfseries ifstmt} = I\-F-\/L\-P\-A\-R+expr+R\-P\-A\-R+stmt+Optional(E\-L\-S\-E + stmt)}\label{classxutools_1_1parsers_1_1_subset_c_parser_a9ef774258d0ba18706860b451a13a939}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_aa66702e37882433c6772cd3d03d07326}{{\bfseries whilestmt} = W\-H\-I\-L\-E-\/L\-P\-A\-R+expr+R\-P\-A\-R+stmt}\label{classxutools_1_1parsers_1_1_subset_c_parser_aa66702e37882433c6772cd3d03d07326}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a7c8da7a57e68fb07a2b1a700d3655527}{{\bfseries dowhilestmt} = D\-O-\/stmt+W\-H\-I\-L\-E+L\-P\-A\-R+expr+R\-P\-A\-R+S\-E\-M\-I}\label{classxutools_1_1parsers_1_1_subset_c_parser_a7c8da7a57e68fb07a2b1a700d3655527}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_aa038d818dc4c4d499007a609686709f7}{{\bfseries returnstmt} = R\-E\-T\-U\-R\-N-\/expr+S\-E\-M\-I}\label{classxutools_1_1parsers_1_1_subset_c_parser_aa038d818dc4c4d499007a609686709f7}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a1cc445a0d3dfd7f4f560a9dc0f8c81d4}{tuple {\bfseries vardecl} = Group(T\-Y\-P\-E + N\-A\-M\-E + Optional(L\-B\-R\-A\-C\-K + integer + R\-B\-R\-A\-C\-K))}\label{classxutools_1_1parsers_1_1_subset_c_parser_a1cc445a0d3dfd7f4f560a9dc0f8c81d4}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ae18cce66102a7ad7422c5323903ff8a1}{tuple {\bfseries arg} = Group(T\-Y\-P\-E + N\-A\-M\-E)}\label{classxutools_1_1parsers_1_1_subset_c_parser_ae18cce66102a7ad7422c5323903ff8a1}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_ad4176d08dbf7994ddfa2173aaa77d6c7}{tuple {\bfseries body} = Zero\-Or\-More(vardecl)}\label{classxutools_1_1parsers_1_1_subset_c_parser_ad4176d08dbf7994ddfa2173aaa77d6c7}
+
+\item 
+tuple \hyperlink{classxutools_1_1parsers_1_1_subset_c_parser_a4224655841f4780679e6d2eca53e57bf}{fundecl}
+\begin{DoxyCompactList}\small\item\em Production for C functions, reference is 'function'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a13cdd56ec68079d0630576136462009c}{{\bfseries decl} = \hyperlink{classxutools_1_1parsers_1_1_subset_c_parser_a4224655841f4780679e6d2eca53e57bf}{fundecl}$|$vardecl}\label{classxutools_1_1parsers_1_1_subset_c_parser_a13cdd56ec68079d0630576136462009c}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a9ddcecb9b92439007e5b420a06187ace}{tuple {\bfseries program} = Zero\-Or\-More(decl)}\label{classxutools_1_1parsers_1_1_subset_c_parser_a9ddcecb9b92439007e5b420a06187ace}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 475 of file parsers.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a388d1177c97775ab9f1272145e26faeb}{\index{xutools\-::parsers\-::\-Subset\-C\-Parser@{xutools\-::parsers\-::\-Subset\-C\-Parser}!get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}}
+\index{get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}!xutools::parsers::SubsetCParser@{xutools\-::parsers\-::\-Subset\-C\-Parser}}
+\subsubsection[{get\-Grammar\-For\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Subset\-C\-Parser.\-get\-Grammar\-For\-Unit (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{report\-\_\-unit}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_subset_c_parser_a388d1177c97775ab9f1272145e26faeb}
+
+
+Retrieve a production by reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em report\-\_\-unit} & This is the production reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the production 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 557 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a8988b0c0214dafa8231cf22bedfe3103}{\index{xutools\-::parsers\-::\-Subset\-C\-Parser@{xutools\-::parsers\-::\-Subset\-C\-Parser}!get\-Region\-I\-D@{get\-Region\-I\-D}}
+\index{get\-Region\-I\-D@{get\-Region\-I\-D}!xutools::parsers::SubsetCParser@{xutools\-::parsers\-::\-Subset\-C\-Parser}}
+\subsubsection[{get\-Region\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-Subset\-C\-Parser.\-get\-Region\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{subtree\-\_\-parse, }
+\item[{}]{region\-\_\-type, }
+\item[{}]{subtree\-\_\-idx}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_subset_c_parser_a8988b0c0214dafa8231cf22bedfe3103}
+
+
+Given a parse tree node for a text region, return the corresponding I\-D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subtree\-\_\-parse} & the parse tree node \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-type} & the type of the node \\
+\hline
+\mbox{\tt in,out}  & {\em subtree\-\_\-idx} & a node index determined by a tree traversal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string that encodes the region I\-D 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & the production reference is not recognized \\
+\hline
+{\em Malformed\-Parse\-Tree} & the parse tree has an unexpected format \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 542 of file parsers.\-py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_subset_c_parser_a4224655841f4780679e6d2eca53e57bf}{\index{xutools\-::parsers\-::\-Subset\-C\-Parser@{xutools\-::parsers\-::\-Subset\-C\-Parser}!fundecl@{fundecl}}
+\index{fundecl@{fundecl}!xutools::parsers::SubsetCParser@{xutools\-::parsers\-::\-Subset\-C\-Parser}}
+\subsubsection[{fundecl}]{\setlength{\rightskip}{0pt plus 5cm}tuple xutools.\-parsers.\-Subset\-C\-Parser.\-fundecl\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_subset_c_parser_a4224655841f4780679e6d2eca53e57bf}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+Group(TYPE + NAME + LPAR + Optional(Group(delimitedList(arg))) + RPAR +
+                         LBRACE + Group(body) + RBRACE)
+\end{DoxyCode}
+
+
+Production for C functions, reference is 'function'. 
+
+
+
+Definition at line 528 of file parsers.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/parsers.\-py\end{DoxyCompactItemize}

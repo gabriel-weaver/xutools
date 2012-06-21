@@ -1,0 +1,348 @@
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep}{\section{xutools.\-tools.\-X\-U\-Grep Class Reference}
+\label{classxutools_1_1tools_1_1_x_u_grep}\index{xutools.\-tools.\-X\-U\-Grep@{xutools.\-tools.\-X\-U\-Grep}}
+}
+
+
+The \hyperlink{classxutools_1_1tools_1_1_x_u_grep}{X\-U\-Grep} class implements xugrep.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a5f16a7d8f3102777954463d64b428de4}{xugrep}
+\begin{DoxyCompactList}\small\item\em Method that actually processes the xupath query and generates a report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_ac005f2a1b9da07214791cfc065e146ed}{process\-\_\-xpath}
+\begin{DoxyCompactList}\small\item\em Action to take a node of type 'xpath' when generating an xugrep report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a80cb3a12742765b85ef47a3b95d60b89}{process\-\_\-step}
+\begin{DoxyCompactList}\small\item\em Action to take a node of type 'step' when generating an xugrep report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_ad912c35bc6cdf8a85e1b332ed84fead4}{process\-\_\-next\-\_\-steps}
+\begin{DoxyCompactList}\small\item\em Action to take a node of type 'next\-\_\-steps' when generating an xugrep report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a9066b53791053cefa5cab2ba716d1022}{process\-\_\-cf\-\_\-match}
+\begin{DoxyCompactList}\small\item\em Action to take on a parse tree node of type 'cf\-\_\-match' when we generate an xugrep report. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_ae3a9d7cc73de8cc93f4fd14096e2fb64}{def {\bfseries process\-\_\-re\-\_\-match}}\label{classxutools_1_1tools_1_1_x_u_grep_ae3a9d7cc73de8cc93f4fd14096e2fb64}
+
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a1e35a8a1e413fab40282db48e6054ab9}{process\-\_\-predicate}
+\begin{DoxyCompactList}\small\item\em Action to take on a parse tree node of type 'predicate' when we generate an xugrep report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_acace7ff361d11b43df726e3141e30640}{get\-\_\-parser}
+\begin{DoxyCompactList}\small\item\em Retrieve a grammar by reference. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a987ef6d3a9436b53eb7073510207deba}{xugrep\-\_\-main}
+\begin{DoxyCompactList}\small\item\em Method used by the command line interface. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_grep_a63e2556cd54971d3f185f0213f453a23}{output\-\_\-reports}
+\begin{DoxyCompactList}\small\item\em Method used to print reports to stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1tools_1_1_x_u_grep}{X\-U\-Grep} class implements xugrep. 
+
+
+
+Definition at line 18 of file tools.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_acace7ff361d11b43df726e3141e30640}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!get\-\_\-parser@{get\-\_\-parser}}
+\index{get\-\_\-parser@{get\-\_\-parser}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{get\-\_\-parser}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-get\-\_\-parser (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{gname}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_acace7ff361d11b43df726e3141e30640}
+
+
+Retrieve a grammar by reference. 
+
+I think that this should really live in the Parser module.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gname} & This is the grammar reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Parser for the given grammar reference 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Grammar\-Ref} & the grammar reference is not recognized \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 281 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a63e2556cd54971d3f185f0213f453a23}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!output\-\_\-reports@{output\-\_\-reports}}
+\index{output\-\_\-reports@{output\-\_\-reports}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{output\-\_\-reports}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-output\-\_\-reports (
+\begin{DoxyParamCaption}
+\item[{}]{reports, }
+\item[{}]{r2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_grep_a63e2556cd54971d3f185f0213f453a23}
+
+
+Method used to print reports to stdout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em reports} & The xugrep reports for each of the files \\
+\hline
+\mbox{\tt in}  & {\em r2} & specifies how regions should be displayed. This parameter needs more mediation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 54 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a9066b53791053cefa5cab2ba716d1022}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!process\-\_\-cf\-\_\-match@{process\-\_\-cf\-\_\-match}}
+\index{process\-\_\-cf\-\_\-match@{process\-\_\-cf\-\_\-match}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{process\-\_\-cf\-\_\-match}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-process\-\_\-cf\-\_\-match (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{cf\-\_\-match, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_a9066b53791053cefa5cab2ba716d1022}
+
+
+Action to take on a parse tree node of type 'cf\-\_\-match' when we generate an xugrep report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em cf\-\_\-match} & The 'cf\-\_\-match' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xugrep report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xugrep report that results when we filter out the result set according to those that match the grammar reference associated with this 'cf\-\_\-match' node.  If the node is None or empty, then we've reached a base case on recursion just return the report. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions 
+\end{DoxyNote}
+
+
+Definition at line 163 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_ad912c35bc6cdf8a85e1b332ed84fead4}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!process\-\_\-next\-\_\-steps@{process\-\_\-next\-\_\-steps}}
+\index{process\-\_\-next\-\_\-steps@{process\-\_\-next\-\_\-steps}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{process\-\_\-next\-\_\-steps}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-process\-\_\-next\-\_\-steps (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{next\-\_\-steps, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_ad912c35bc6cdf8a85e1b332ed84fead4}
+
+
+Action to take a node of type 'next\-\_\-steps' when generating an xugrep report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em next\-\_\-steps} & The 'next\-\_\-steps' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xugrep report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An xugrep report that contains a subset of the current result forest that is in the language of these next steps.  If the 'next\-\_\-steps' node is None or empty, then we've reached a base case on recursion. Just return the report. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 140 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a1e35a8a1e413fab40282db48e6054ab9}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!process\-\_\-predicate@{process\-\_\-predicate}}
+\index{process\-\_\-predicate@{process\-\_\-predicate}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{process\-\_\-predicate}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-process\-\_\-predicate (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{predicate, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_a1e35a8a1e413fab40282db48e6054ab9}
+
+
+Action to take on a parse tree node of type 'predicate' when we generate an xugrep report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em predicate} & The 'predicate' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xugrep report. This should really be an in,out param. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xugrep report that results when we filter out the current result set according to those that match the predicate.  If the node is None or empty, then we've reached a base case, just return the report 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 267 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a80cb3a12742765b85ef47a3b95d60b89}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!process\-\_\-step@{process\-\_\-step}}
+\index{process\-\_\-step@{process\-\_\-step}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{process\-\_\-step}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-process\-\_\-step (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{step, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_a80cb3a12742765b85ef47a3b95d60b89}
+
+
+Action to take a node of type 'step' when generating an xugrep report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em step} & The 'step' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & The current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xugrep report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An xugrep report that contains a subset of the current result forest that is in the language of this 'step'.  If the 'step' node is None or empty, then we've reached a base case on recursion. Just return the report. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 119 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_ac005f2a1b9da07214791cfc065e146ed}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!process\-\_\-xpath@{process\-\_\-xpath}}
+\index{process\-\_\-xpath@{process\-\_\-xpath}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{process\-\_\-xpath}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-process\-\_\-xpath (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{xpath, }
+\item[{}]{indent, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_ac005f2a1b9da07214791cfc065e146ed}
+
+
+Action to take a node of type 'xpath' when generating an xugrep report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em xpath} & The 'xpath' parse-\/tree node to visit \\
+\hline
+\mbox{\tt in}  & {\em indent} & the current indentation level within the parse tree \\
+\hline
+\mbox{\tt in}  & {\em report} & The current xugrep report. This should really be an in,out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xugrep report that contains matches that are in the language of the xupath query.  If the 'xpath' node is None or empty, then we've reached a base case on recursion. Just return the report. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 101 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a5f16a7d8f3102777954463d64b428de4}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!xugrep@{xugrep}}
+\index{xugrep@{xugrep}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{xugrep}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-xugrep (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{x\-Path, }
+\item[{}]{report}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_grep_a5f16a7d8f3102777954463d64b428de4}
+
+
+Method that actually processes the xupath query and generates a report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em x\-Path} & The xupath query that specifies results \\
+\hline
+\mbox{\tt in}  & {\em report} & The blank report. This should be an in/out param \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The xugrep report that contains matches that are in the language of the xupath query. 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about exceptions 
+\end{DoxyNote}
+
+
+Definition at line 81 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_grep_a987ef6d3a9436b53eb7073510207deba}{\index{xutools\-::tools\-::\-X\-U\-Grep@{xutools\-::tools\-::\-X\-U\-Grep}!xugrep\-\_\-main@{xugrep\-\_\-main}}
+\index{xugrep\-\_\-main@{xugrep\-\_\-main}!xutools::tools::XUGrep@{xutools\-::tools\-::\-X\-U\-Grep}}
+\subsubsection[{xugrep\-\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Grep.\-xugrep\-\_\-main (
+\begin{DoxyParamCaption}
+\item[{}]{xpath, }
+\item[{}]{file\-\_\-paths}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_grep_a987ef6d3a9436b53eb7073510207deba}
+
+
+Method used by the command line interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xpath} & The xupath query that specifies a result set \\
+\hline
+\mbox{\tt in}  & {\em file\-\_\-paths} & The files from which to extract results \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the xugrep report 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about Exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 27 of file tools.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/tools.\-py\end{DoxyCompactItemize}

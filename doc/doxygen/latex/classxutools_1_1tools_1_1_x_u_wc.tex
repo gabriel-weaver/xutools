@@ -1,0 +1,241 @@
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc}{\section{xutools.\-tools.\-X\-U\-Wc Class Reference}
+\label{classxutools_1_1tools_1_1_x_u_wc}\index{xutools.\-tools.\-X\-U\-Wc@{xutools.\-tools.\-X\-U\-Wc}}
+}
+
+
+The \hyperlink{classxutools_1_1tools_1_1_x_u_wc}{X\-U\-Wc} class implements xuwc.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_abaeb2b91ed4883dd1bbe5107a01f8eda}{get\-\_\-wc\-\_\-reports}
+\begin{DoxyCompactList}\small\item\em Method that actually generates the wc reports for each of the input files. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_a34c28d8a85bab7fa6ab12d9358082801}{get\-\_\-wc\-\_\-report}
+\begin{DoxyCompactList}\small\item\em Method that computes a wc\-\_\-report. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_a83fc9c63d281459cb97450b360db5c3a}{get\-\_\-id\-\_\-for\-\_\-idx}
+\begin{DoxyCompactList}\small\item\em Prune a parse-\/tree node I\-D to the provided level. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_a596b4d12127fd352732b1ff1d8f8141e}{get\-\_\-ids\-\_\-for\-\_\-idx}
+\begin{DoxyCompactList}\small\item\em Prune a list of parse-\/tree node I\-Ds to the provided level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_a17bf99ea83d003872e27c88de910d16c}{xuwc\-\_\-main}
+\begin{DoxyCompactList}\small\item\em Method used by the command line interface. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1tools_1_1_x_u_wc_a0cf28330fdeb1b2ea28947d7c60c6ea7}{output\-\_\-reports}
+\begin{DoxyCompactList}\small\item\em Method used to print reports to stdout. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1tools_1_1_x_u_wc}{X\-U\-Wc} class implements xuwc. 
+
+This class needs to be renamed. 
+
+Definition at line 300 of file tools.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_a83fc9c63d281459cb97450b360db5c3a}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!get\-\_\-id\-\_\-for\-\_\-idx@{get\-\_\-id\-\_\-for\-\_\-idx}}
+\index{get\-\_\-id\-\_\-for\-\_\-idx@{get\-\_\-id\-\_\-for\-\_\-idx}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{get\-\_\-id\-\_\-for\-\_\-idx}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-get\-\_\-id\-\_\-for\-\_\-idx (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{level, }
+\item[{}]{region\-\_\-id}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_wc_a83fc9c63d281459cb97450b360db5c3a}
+
+
+Prune a parse-\/tree node I\-D to the provided level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em level} & The level at which to report results \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-id} & The parse-\/tree node I\-D to prune  If the level is larger than the number of levels in the region\-\_\-id, then return None \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The parse-\/tree node I\-D pruned to a specified level 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+This is usually called on elements of the 'tree\-\_\-ids' list within the xugrep report. 
+\end{DoxyNote}
+
+
+Definition at line 498 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_a596b4d12127fd352732b1ff1d8f8141e}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!get\-\_\-ids\-\_\-for\-\_\-idx@{get\-\_\-ids\-\_\-for\-\_\-idx}}
+\index{get\-\_\-ids\-\_\-for\-\_\-idx@{get\-\_\-ids\-\_\-for\-\_\-idx}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{get\-\_\-ids\-\_\-for\-\_\-idx}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-get\-\_\-ids\-\_\-for\-\_\-idx (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{level, }
+\item[{}]{region\-\_\-ids}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_wc_a596b4d12127fd352732b1ff1d8f8141e}
+
+
+Prune a list of parse-\/tree node I\-Ds to the provided level. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em level} & The level at which to prune results \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-ids} & The list of region\-\_\-ids to prune  If one of the region\-\_\-ids cannot be pruned, then it will not be included in the result list  We return a set of valid I\-Ds. Therefore, two parse-\/tree node I\-Ds that are originally distinct may prune to the same I\-D. This same I\-D occurs only once in the return list. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pruned parse-\/tree node ids 
+\end{DoxyReturn}
+
+
+Definition at line 516 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_a34c28d8a85bab7fa6ab12d9358082801}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!get\-\_\-wc\-\_\-report@{get\-\_\-wc\-\_\-report}}
+\index{get\-\_\-wc\-\_\-report@{get\-\_\-wc\-\_\-report}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{get\-\_\-wc\-\_\-report}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-get\-\_\-wc\-\_\-report (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{report, }
+\item[{}]{wc\-\_\-params}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_wc_a34c28d8a85bab7fa6ab12d9358082801}
+
+
+Method that computes a wc\-\_\-report. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em report} & The xugrep report to process \\
+\hline
+\mbox{\tt in}  & {\em wc\-\_\-params} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Not\-Yet\-Implemented} & Regular expression as context is not implemented \\
+\hline
+{\em Invalid\-Context\-Exception} & the context must be in the xupath \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+wc report 
+\end{DoxyReturn}
+
+
+Definition at line 391 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_abaeb2b91ed4883dd1bbe5107a01f8eda}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!get\-\_\-wc\-\_\-reports@{get\-\_\-wc\-\_\-reports}}
+\index{get\-\_\-wc\-\_\-reports@{get\-\_\-wc\-\_\-reports}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{get\-\_\-wc\-\_\-reports}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-get\-\_\-wc\-\_\-reports (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{reports, }
+\item[{}]{wc\-\_\-params}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1tools_1_1_x_u_wc_abaeb2b91ed4883dd1bbe5107a01f8eda}
+
+
+Method that actually generates the wc reports for each of the input files. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em reports} & The xugrep reports to process \\
+\hline
+\mbox{\tt in}  & {\em wc\-\_\-params} & If neither 'count\-\_\-regexp' or 'count\-\_\-type' are set, then we count the last item in the xupath.  If neither 'context\-\_\-regexp' or 'context\-\_\-type' are set, then we report matches in terms of the first type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the updated wc\-\_\-reports 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about Exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 369 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_a0cf28330fdeb1b2ea28947d7c60c6ea7}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!output\-\_\-reports@{output\-\_\-reports}}
+\index{output\-\_\-reports@{output\-\_\-reports}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{output\-\_\-reports}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-output\-\_\-reports (
+\begin{DoxyParamCaption}
+\item[{}]{wc\-\_\-reports, }
+\item[{}]{wc\-\_\-params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_wc_a0cf28330fdeb1b2ea28947d7c60c6ea7}
+
+
+Method used to print reports to stdout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em wc\-\_\-reports} & The xuwc reports for each of the files. \\
+\hline
+\mbox{\tt in}  & {\em wc\-\_\-params} & The parameters specific to wc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Count\-Type\-Undefined} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 332 of file tools.\-py.
+
+\hypertarget{classxutools_1_1tools_1_1_x_u_wc_a17bf99ea83d003872e27c88de910d16c}{\index{xutools\-::tools\-::\-X\-U\-Wc@{xutools\-::tools\-::\-X\-U\-Wc}!xuwc\-\_\-main@{xuwc\-\_\-main}}
+\index{xuwc\-\_\-main@{xuwc\-\_\-main}!xutools::tools::XUWc@{xutools\-::tools\-::\-X\-U\-Wc}}
+\subsubsection[{xuwc\-\_\-main}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-tools.\-X\-U\-Wc.\-xuwc\-\_\-main (
+\begin{DoxyParamCaption}
+\item[{}]{xpath, }
+\item[{}]{file\-\_\-paths, }
+\item[{}]{wc\-\_\-params}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1tools_1_1_x_u_wc_a17bf99ea83d003872e27c88de910d16c}
+
+
+Method used by the command line interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em xpath} & The xupath query that specifies a result set to count \\
+\hline
+\mbox{\tt in}  & {\em file\-\_\-paths} & The files from which to extract results \\
+\hline
+\mbox{\tt in}  & {\em wc\-\_\-params} & The parameters specific to wc.\\
+\hline
+\end{DoxyParams}
+wc\-\_\-params\mbox{[}'count\-\_\-type'\mbox{]} Count occurrences of strings in the language of this grammar production reference.
+
+wc\-\_\-params\mbox{[}'count\-\_\-regexp'\mbox{]} Count occurrences of strings in the language of this regular expression
+
+wc\-\_\-params\mbox{[}'context\-\_\-type'\mbox{]} Report counts relative to strings in the language of this grammar production reference.
+
+wc\-\_\-params\mbox{[}'context\-\_\-regexp'\mbox{]} Report counts relative to strings in the language of this regular expression reference \begin{DoxyReturn}{Returns}
+the xuwc report 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about Exceptions? 
+\end{DoxyNote}
+
+
+Definition at line 319 of file tools.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/tools.\-py\end{DoxyCompactItemize}

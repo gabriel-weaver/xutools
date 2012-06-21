@@ -1,0 +1,205 @@
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser}{\section{xutools.\-parsers.\-T\-E\-I\-Lite\-Parser Class Reference}
+\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser}\index{xutools.\-parsers.\-T\-E\-I\-Lite\-Parser@{xutools.\-parsers.\-T\-E\-I\-Lite\-Parser}}
+}
+
+
+The \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser}{T\-E\-I\-Lite\-Parser} class is used to parse X\-M\-L documents encoded in T\-E\-I-\/\-X\-M\-L.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a348bf296605daf393736c662b16a08c1}{get\-Region\-I\-D}
+\begin{DoxyCompactList}\small\item\em Given a parse tree node for a text region, return the corresponding I\-D. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a10b1d4cbbf944450675553699e1fe936}{get\-Grammar\-For\-Unit}
+\begin{DoxyCompactList}\small\item\em Retrieve a production by reference. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3afa1379522156059318357c4f8384e2}{get\-Original\-Text}
+\begin{DoxyCompactList}\small\item\em Extract all occurrences of strings in the language of the production from the text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3574a39d7821cb7619645be411bcca22}{normalize\-Parse\-Tree}
+\begin{DoxyCompactList}\small\item\em Take a parse object and put it into a canonical parse tree representation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a2d47139552ff6788d9dfe8ff239a4772}{tuple {\bfseries comment\-Start} = Literal(\char`\"{}$<$!-\/-\/\char`\"{})}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a2d47139552ff6788d9dfe8ff239a4772}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_aa32c33f1a2c3a9fda80064c4342b7a96}{tuple {\bfseries comment\-End} = Literal(\char`\"{}-\/-\/$>$\char`\"{})}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_aa32c33f1a2c3a9fda80064c4342b7a96}
+
+\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}{comment\-Region} = comment\-Start+Skip\-To( Match\-First(comment\-End) )}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I comments, reference is 'comment'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}{head\-Region} = head\-Start+Skip\-To(Match\-First(head\-End))}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I headers, reference is 'head'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}{p\-Region} = p\-Start+Skip\-To(Match\-First(p\-End))}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I paragraphs, reference is 'p'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}{table\-Region} = table\-Start+Skip\-To(Match\-First(table\-End))}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I Tables, reference is 'table'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_addadf6fc1e854051cd613347055cbbbe}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_addadf6fc1e854051cd613347055cbbbe}{sss\-Region} = sss\-Start+Group( Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}{head\-Region}) + Zero\-Or\-More(Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}{p\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}{comment\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}{table\-Region}) ) )}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_addadf6fc1e854051cd613347055cbbbe}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I Subsubsections, reference is 'subsubsection'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a1ac66c21c7e527ec0100ae062a21e469}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a1ac66c21c7e527ec0100ae062a21e469}{ss\-Region} = ss\-Start+Group( Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}{head\-Region}) + Zero\-Or\-More( Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}{p\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}{comment\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_addadf6fc1e854051cd613347055cbbbe}{sss\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}{table\-Region}) ) )}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a1ac66c21c7e527ec0100ae062a21e469}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I Subsections, reference is 'subsection'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ae31d7f34d6b46c9df39d369001bfe5ee}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ae31d7f34d6b46c9df39d369001bfe5ee}{s\-Region} = s\-Start+Group( Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a518d5701e5eaec79a72507a5b4670bd8}{head\-Region}) + Zero\-Or\-More( Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ac55a5952c3487b4509af1903cbe50a3e}{p\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ada58e2826fd1460fce2c76bba59afb81}{comment\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a1ac66c21c7e527ec0100ae062a21e469}{ss\-Region}) $|$ Group(\hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_afc2d597c1b62047d38c167ce77d1c080}{table\-Region}) ) )}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ae31d7f34d6b46c9df39d369001bfe5ee}
+
+\begin{DoxyCompactList}\small\item\em Production for T\-E\-I Sections, reference is 'section'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a2736358c1829fbaf2634c66720e6d4ea}{tuple \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a2736358c1829fbaf2634c66720e6d4ea}{edition\-Region} = Group( One\-Or\-More( Group( \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser_ae31d7f34d6b46c9df39d369001bfe5ee}{s\-Region} ) ) )}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a2736358c1829fbaf2634c66720e6d4ea}
+
+\begin{DoxyCompactList}\small\item\em Production for the entire T\-E\-I document, reference is 'edition'. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a441a253872fb2bb8bc530d7f545dbf89}{string {\bfseries ref\-Key} = \char`\"{}id\-\_\-attr\char`\"{}}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a441a253872fb2bb8bc530d7f545dbf89}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1parsers_1_1_t_e_i_lite_parser}{T\-E\-I\-Lite\-Parser} class is used to parse X\-M\-L documents encoded in T\-E\-I-\/\-X\-M\-L. 
+
+\begin{DoxyNote}{Note}
+The grammar reference is 'tei' 
+\end{DoxyNote}
+
+
+Definition at line 108 of file parsers.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a10b1d4cbbf944450675553699e1fe936}{\index{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}!get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}}
+\index{get\-Grammar\-For\-Unit@{get\-Grammar\-For\-Unit}!xutools::parsers::TEILiteParser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}}
+\subsubsection[{get\-Grammar\-For\-Unit}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-T\-E\-I\-Lite\-Parser.\-get\-Grammar\-For\-Unit (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{report\-\_\-unit}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a10b1d4cbbf944450675553699e1fe936}
+
+
+Retrieve a production by reference. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em report\-\_\-unit} & This is the production reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the production 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 174 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3afa1379522156059318357c4f8384e2}{\index{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}!get\-Original\-Text@{get\-Original\-Text}}
+\index{get\-Original\-Text@{get\-Original\-Text}!xutools::parsers::TEILiteParser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}}
+\subsubsection[{get\-Original\-Text}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-T\-E\-I\-Lite\-Parser.\-get\-Original\-Text (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{grammar, }
+\item[{}]{text, }
+\item[{}]{match}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3afa1379522156059318357c4f8384e2}
+
+
+Extract all occurrences of strings in the language of the production from the text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grammar} & The production\-Object, this should be a production reference \\
+\hline
+{\em text} & The string from which to extract occurrences \\
+\hline
+{\em match} & Not sure what this is doing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of strings in the language of this production from the text 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+What about Exceptions? Should we be returning tokens instead so that we can support highlighting, etc? 
+\end{DoxyNote}
+
+
+Definition at line 209 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a348bf296605daf393736c662b16a08c1}{\index{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}!get\-Region\-I\-D@{get\-Region\-I\-D}}
+\index{get\-Region\-I\-D@{get\-Region\-I\-D}!xutools::parsers::TEILiteParser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}}
+\subsubsection[{get\-Region\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-T\-E\-I\-Lite\-Parser.\-get\-Region\-I\-D (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{subtree\-\_\-parse, }
+\item[{}]{region\-\_\-type, }
+\item[{}]{subtree\-\_\-idx}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a348bf296605daf393736c662b16a08c1}
+
+
+Given a parse tree node for a text region, return the corresponding I\-D. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em subtree\-\_\-parse} & the parse tree node \\
+\hline
+\mbox{\tt in}  & {\em region\-\_\-type} & the type of the node \\
+\hline
+\mbox{\tt in,out}  & {\em subtree\-\_\-idx} & a node index determined by a tree traversal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a string that encodes the region I\-D 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Production\-Ref} & the production reference is not recognized \\
+\hline
+{\em Malformed\-Parse\-Tree} & the parse tree has an unexpected format \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 154 of file parsers.\-py.
+
+\hypertarget{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3574a39d7821cb7619645be411bcca22}{\index{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}!normalize\-Parse\-Tree@{normalize\-Parse\-Tree}}
+\index{normalize\-Parse\-Tree@{normalize\-Parse\-Tree}!xutools::parsers::TEILiteParser@{xutools\-::parsers\-::\-T\-E\-I\-Lite\-Parser}}
+\subsubsection[{normalize\-Parse\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-parsers.\-T\-E\-I\-Lite\-Parser.\-normalize\-Parse\-Tree (
+\begin{DoxyParamCaption}
+\item[{}]{parse\-\_\-tree\-\_\-list}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1parsers_1_1_t_e_i_lite_parser_a3574a39d7821cb7619645be411bcca22}
+
+
+Take a parse object and put it into a canonical parse tree representation. 
+
+Rethink this interface in terms of the X\-U\-Tools (space and time complexity) and also in terms of extant libraries such as libaugeas.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parse\-\_\-tree\-\_\-list} & The list of parse trees that resulted from parsing \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the normalized parse tree 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+think about how to do this more generally in a language-\/agnostic way. 
+\end{DoxyNote}
+
+
+Definition at line 230 of file parsers.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/parsers.\-py\end{DoxyCompactItemize}

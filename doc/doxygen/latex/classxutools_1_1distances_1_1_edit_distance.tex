@@ -1,0 +1,149 @@
+\hypertarget{classxutools_1_1distances_1_1_edit_distance}{\section{xutools.\-distances.\-Edit\-Distance Class Reference}
+\label{classxutools_1_1distances_1_1_edit_distance}\index{xutools.\-distances.\-Edit\-Distance@{xutools.\-distances.\-Edit\-Distance}}
+}
+
+
+The \hyperlink{classxutools_1_1distances_1_1_edit_distance}{Edit\-Distance} class may be used as a source of cost functions using productions associated with the 'builtin' grammar.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classxutools_1_1distances_1_1_edit_distance_a9c3bce4c77ff5a5a886fe013d07bba73}{edit\-\_\-distance}
+\begin{DoxyCompactList}\small\item\em Helper method for compute\-\_\-edit\-\_\-distance. \end{DoxyCompactList}\item 
+def \hyperlink{classxutools_1_1distances_1_1_edit_distance_ab398436c1fcae1caa026bf78589542f5}{compute\-\_\-edit\-\_\-distance}
+\begin{DoxyCompactList}\small\item\em Method used to compute the edit distance between two strings X and Y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classxutools_1_1distances_1_1_edit_distance_aaa1544e3e291d6c7d8bc51e61189dcd1}{D\-E\-L\-E\-T\-E} = 1
+\begin{DoxyCompactList}\small\item\em Constant associated with the D\-E\-L\-E\-T\-E edit operation. \end{DoxyCompactList}\item 
+int \hyperlink{classxutools_1_1distances_1_1_edit_distance_a27373ca74c5dad1c376df5087c0c7e5c}{U\-P\-D\-A\-T\-E} = 2
+\begin{DoxyCompactList}\small\item\em Constant associated with the U\-P\-D\-A\-T\-E edit operation. \end{DoxyCompactList}\item 
+int \hyperlink{classxutools_1_1distances_1_1_edit_distance_a76c00e94c810634eee296a4e298f86d2}{I\-N\-S\-E\-R\-T} = 3
+\begin{DoxyCompactList}\small\item\em Constant associated with the I\-N\-S\-E\-R\-T edit operation. \end{DoxyCompactList}\item 
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_a13e47e3711a07838f57b1f6e6101f672}{{\bfseries b} = None}\label{classxutools_1_1distances_1_1_edit_distance_a13e47e3711a07838f57b1f6e6101f672}
+
+\item 
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_a537a6361c0f5c863fc14eb25780660b0}{\hyperlink{classxutools_1_1distances_1_1_edit_distance_a537a6361c0f5c863fc14eb25780660b0}{c} = None}\label{classxutools_1_1distances_1_1_edit_distance_a537a6361c0f5c863fc14eb25780660b0}
+
+\begin{DoxyCompactList}\small\item\em The dynamic-\/programming, edit-\/distance matrix. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classxutools_1_1distances_1_1_edit_distance}{Edit\-Distance} class may be used as a source of cost functions using productions associated with the 'builtin' grammar. 
+
+Even though byte, character, word, may not appear within the 'builtin' grammar currently, we still use these as builtins. 
+
+Definition at line 14 of file distances.\-py.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_ab398436c1fcae1caa026bf78589542f5}{\index{xutools\-::distances\-::\-Edit\-Distance@{xutools\-::distances\-::\-Edit\-Distance}!compute\-\_\-edit\-\_\-distance@{compute\-\_\-edit\-\_\-distance}}
+\index{compute\-\_\-edit\-\_\-distance@{compute\-\_\-edit\-\_\-distance}!xutools::distances::EditDistance@{xutools\-::distances\-::\-Edit\-Distance}}
+\subsubsection[{compute\-\_\-edit\-\_\-distance}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Edit\-Distance.\-compute\-\_\-edit\-\_\-distance (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{X, }
+\item[{}]{Y}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1distances_1_1_edit_distance_ab398436c1fcae1caa026bf78589542f5}
+
+
+Method used to compute the edit distance between two strings X and Y. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em X} & \\
+\hline
+\mbox{\tt in}  & {\em Y} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None  The edit distance between X and Y is stored in the matrix self.\-c 
+\end{DoxyReturn}
+
+
+Definition at line 79 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_a9c3bce4c77ff5a5a886fe013d07bba73}{\index{xutools\-::distances\-::\-Edit\-Distance@{xutools\-::distances\-::\-Edit\-Distance}!edit\-\_\-distance@{edit\-\_\-distance}}
+\index{edit\-\_\-distance@{edit\-\_\-distance}!xutools::distances::EditDistance@{xutools\-::distances\-::\-Edit\-Distance}}
+\subsubsection[{edit\-\_\-distance}]{\setlength{\rightskip}{0pt plus 5cm}def xutools.\-distances.\-Edit\-Distance.\-edit\-\_\-distance (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{s1, }
+\item[{}]{s2, }
+\item[{}]{count\-\_\-type}
+\end{DoxyParamCaption}
+)}}\label{classxutools_1_1distances_1_1_edit_distance_a9c3bce4c77ff5a5a886fe013d07bba73}
+
+
+Helper method for compute\-\_\-edit\-\_\-distance. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em self} & \\
+\hline
+\mbox{\tt in}  & {\em s1} & The first string to compare \\
+\hline
+\mbox{\tt in}  & {\em s2} & The second string to compare \\
+\hline
+\mbox{\tt in}  & {\em count\-\_\-type} & The way to tokenize the strings for comparison. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the edit distance between the two strings 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Unrecognized\-Type\-Exception} & We may want to think about how this relates to an Unrecognized\-Production\-Ref exception. \\
+\hline
+\end{DoxyExceptions}
+
+
+Definition at line 35 of file distances.\-py.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_aaa1544e3e291d6c7d8bc51e61189dcd1}{\index{xutools\-::distances\-::\-Edit\-Distance@{xutools\-::distances\-::\-Edit\-Distance}!D\-E\-L\-E\-T\-E@{D\-E\-L\-E\-T\-E}}
+\index{D\-E\-L\-E\-T\-E@{D\-E\-L\-E\-T\-E}!xutools::distances::EditDistance@{xutools\-::distances\-::\-Edit\-Distance}}
+\subsubsection[{D\-E\-L\-E\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}int xutools.\-distances.\-Edit\-Distance.\-D\-E\-L\-E\-T\-E = 1\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_edit_distance_aaa1544e3e291d6c7d8bc51e61189dcd1}
+
+
+Constant associated with the D\-E\-L\-E\-T\-E edit operation. 
+
+
+
+Definition at line 17 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_a76c00e94c810634eee296a4e298f86d2}{\index{xutools\-::distances\-::\-Edit\-Distance@{xutools\-::distances\-::\-Edit\-Distance}!I\-N\-S\-E\-R\-T@{I\-N\-S\-E\-R\-T}}
+\index{I\-N\-S\-E\-R\-T@{I\-N\-S\-E\-R\-T}!xutools::distances::EditDistance@{xutools\-::distances\-::\-Edit\-Distance}}
+\subsubsection[{I\-N\-S\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}int xutools.\-distances.\-Edit\-Distance.\-I\-N\-S\-E\-R\-T = 3\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_edit_distance_a76c00e94c810634eee296a4e298f86d2}
+
+
+Constant associated with the I\-N\-S\-E\-R\-T edit operation. 
+
+
+
+Definition at line 21 of file distances.\-py.
+
+\hypertarget{classxutools_1_1distances_1_1_edit_distance_a27373ca74c5dad1c376df5087c0c7e5c}{\index{xutools\-::distances\-::\-Edit\-Distance@{xutools\-::distances\-::\-Edit\-Distance}!U\-P\-D\-A\-T\-E@{U\-P\-D\-A\-T\-E}}
+\index{U\-P\-D\-A\-T\-E@{U\-P\-D\-A\-T\-E}!xutools::distances::EditDistance@{xutools\-::distances\-::\-Edit\-Distance}}
+\subsubsection[{U\-P\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}int xutools.\-distances.\-Edit\-Distance.\-U\-P\-D\-A\-T\-E = 2\hspace{0.3cm}{\ttfamily [static]}}}\label{classxutools_1_1distances_1_1_edit_distance_a27373ca74c5dad1c376df5087c0c7e5c}
+
+
+Constant associated with the U\-P\-D\-A\-T\-E edit operation. 
+
+
+
+Definition at line 19 of file distances.\-py.
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+src/xutools/distances.\-py\end{DoxyCompactItemize}
