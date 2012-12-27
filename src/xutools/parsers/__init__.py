@@ -569,7 +569,7 @@ class JuniperParser():
     SEMI = Suppress(';')
     RBRACK = Suppress('[')
     LBRACK = Suppress(']')
-    COMMENT = OneOrMore('#') + restOfLine
+    COMMENT = LineStart() + OneOrMore('#') + restOfLine
     word = Word(printables, excludeChars='{};#[]')
 
     stmt = Group(OneOrMore(word) + SEMI)
@@ -589,6 +589,14 @@ class JuniperParser():
         LBRACK + SEMI
     inactive = Group(Keyword('inactive')) + Suppress(':') + (block ^ stmt)
 
+    # Dispatcher to ease extending this parser
+    _grammars = {
+        'groups': groups,
+        'interfaces': interfaces,
+        'apply-groups': apply_groups,
+        'inactive': inactive
+    }
+
     refKey = "label"
 
     ## Given a parse tree node for a text region, return the corresponding ID
@@ -601,39 +609,31 @@ class JuniperParser():
     #  @note If we return None, then a number gets assigned that starts at 1
     #          since files start with line 1.  This is hackish, figure out a nice interface.
     def getRegionID(self, subtree_parse, region_type, subtree_idx):
-        result = None
-        if region_type == 'groups':
-            result = 'groups'
-        elif region_type == 'interfaces':
-            result = 'interfaces'
-        elif region_type == 'apply-groups':
-            result = 'apply-groups'
-        elif region_type == 'inactive':
-            result = 'inactive'
+        if type(subtree_parse[0]) == list:
+            result = subtree_prase[0][0]
         else:
-            print "unrecognized region type: " + region_type
-            sys.exit(-1)
+            result = region_type
 
         return result
 
-    ## Retrieve a production by reference
+    ## Retrieve a production by reference or generate a slow one-size-fits-all one
     #  @param[in] report_unit  This is the production reference
     #  @return the production
     #  @exception UnrecognizedProductionRef
     def getGrammarForUnit(self, report_unit):
-        if report_unit == 'groups':
-            regionGrammar = self.groups
-        elif report_unit == 'interfaces':
-            regionGrammar = self.interfaces
-        elif report_unit == 'apply-groups':
-            regionGrammar = self.apply_groups
-        elif report_unit == 'inactive':
-            regionGrammar = self.inactive
-        else:
-            print("Unknown Grammar '{0}' error!".format(report_unit))
-            sys.exit(-1)
+        region_grammar = self._grammars.get(report_unit)
+        if not region_grammar:
+            print >> sys.stderr, "Can't find grammar for {0}.".format(
+                report_unit), 'Trying generalized but slower approach.'
+            _block = Group(Keyword(report_unit) + ZeroOrMore(self.word)) + \
+                FollowedBy('{') + self.LCURL + \
+                Group(ZeroOrMore(self.block | self.stmt)) + self.RCURL
+            _stmt = Group(Keyword(report_unit) + OneOrMore(self.word) +
+                self.SEMI)
+            _stmt.ignore(self.COMMENT)
+            region_grammar = (_block ^ _stmt)
 
-        return regionGrammar
+        return region_grammar
 
     ## Extract all occurrences of strings in the language of the
     #   production from the text.

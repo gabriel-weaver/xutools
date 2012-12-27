@@ -75,14 +75,14 @@ class XUGrep():
                 print "\t".join(report['tree_types'] + ['region'])
             i = 0
             for tree in report['result_forest']:
-                id = report['tree_ids'][i]
-                id = id.replace(".", "\t")
+                id_ = report['tree_ids'][i]
+                id_ = id_.replace(".", "\t")
                 region = tree
                 if ('LE' == r2):
                     region = tree.replace('\n', '/n')
-                    print "\t".join([id, region])
+                    print "\t".join([id_, region])
                 else:
-                    #print id + "\n" + region + "\n"
+                    #print id_ + "\n" + region + "\n"
                     print region
                 i = i + 1
 
