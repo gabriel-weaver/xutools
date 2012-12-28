@@ -672,13 +672,17 @@ class JuniperParser():
                   'children': []}
         for item in parse_tree_list:
             if isinstance(item, types.ListType) and len(item) > 0:
-                if item[0] == 'groups':
-                    ntree['type'] = 'groups'
-                    ntree['id'] = item[1].strip()
+                if isinstance(item[0], types.StringType):
+                    ntree['type'] = item[0]
+                    if len(item) > 1:
+                        ntree['id'] = item[1]
                 elif (isinstance(item[0], types.ListType)):
                     for subtree_list in item:
                         nsubtree = JuniperParser.normalizeParseTree(subtree_list)
                         ntree['children'].append(nsubtree)
+                else:
+                    ntree['type'] = item[0]
+                    ntree['id'] = ''
             elif isinstance(item, types.StringType):
                 if item != '\n' and item != ' ':
                     ntree['type'] = 'line'

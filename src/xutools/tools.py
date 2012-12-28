@@ -753,9 +753,22 @@ class XUDiff():
         for p, s, e in parses:
             result.append(p)
 
+        empty_report = {'id': None,
+                'type': None,
+                'children': [],
+                'label': None}
         report = self.process_xpath(result[0].path, "", report)
-        t0 = report['result_parse_tree_0'][0]
-        t1 = report['result_parse_tree_1'][0]
+        if (type(report['result_parse_tree_0']) == list and
+            len(report['result_parse_tree_0']) > 0):
+            t0 = report['result_parse_tree_0'][0]
+        else:
+            t0 = empty_report
+
+        if (type(report['result_parse_tree_1']) == list and
+            len(report['result_parse_tree_1']) > 0):
+            t1 = report['result_parse_tree_1'][0]
+        else:
+            t1 = empty_report
 
         params = TD.compute_tree_dist(t0, t1, init_params)
 
@@ -924,6 +937,8 @@ class XUDiff():
             parser = parsers.TEILiteParser()
         elif ('ios' == gname):
             parser = parsers.CiscoIOSParser()
+        elif gname == 'juniper':
+            parser = parsers.JuniperParser()
         elif ('nvd' == gname):
             parser = parsers.NVDParser()
         elif ('cspec' == gname):
