@@ -1,6 +1,6 @@
 XUTools Ourea (Oὔρεα):  6.1.2013
 ================================
-The goal of this release was to refactor the previously-implementation
+The goal of this release was to refactor the previous implementation 
 to use the xutools.corpus module.  The goal of this module is to allow
 practitioners to formalize textual analysis techniques as operations
 on a language (a set of strings).  So far we have implemented XUGrep
