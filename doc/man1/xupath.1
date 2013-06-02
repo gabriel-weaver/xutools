@@ -25,16 +25,16 @@ constructs are defined.
 .br
 .B Definition of xupath and step:  
 As mentioned above, a 
-.IT xupath 
+.I xupath 
 consists of a sequence of references to
 language constructs that are delimited by one or more slashes.  We
 will call each of these 'references to a language construct' a 
-.IT step.
+.I step.
 
 .P
 For example, the xupath \(dq/builtin:file/ios:interface\(dq consists
 of two steps that each reference their own language construct.  The
-first step, \(dq/builtin:file\(dq references to a file.  The second
+first step, \(dq/builtin:file\(dq references a file.  The second
 step, \(dq/ios:interface\(dq references an interface as defined in
 Cisco IOS.  The order of the steps means that matches to this xupath
 query consist of IOS interfaces contained within files.
@@ -75,7 +75,7 @@ Sometimes a step's 'language construct' may be further qualified by a
 Currently, the only predicate defined in the xupath syntax is the
 \(dqre:testsubtree\(dq predicate and this allows us to filter strings
 by a regular expression (the name of this predicate may change in the
-future, it came from the XML community).  For example, the second step
+future, it is an artifact of xupath's origins in XPath).  For example, the second step
 of xupath
 \(dq/builtin:file/tei:subsubsection[re:testsubtree('Globus','e')]\(dq
 references all subsubsections that contain the word 'Globus'.  
@@ -99,7 +99,7 @@ of a policy and network administrators reference
 .I interfaces.
 C developers, in order to use a library function in their own code,
 must know the name, purpose, and calling sequence of that function but
-not its implementation.  Similariy, users of our grammar library need
+not its implementation.  Similarly, users of our grammar library need
 to know the name and purpose of the construct upon which they want to
 operate, but not its specification as a context-free grammar
 production.  
@@ -151,7 +151,7 @@ Given a language name, get the grammar that specifies strings in that
 language.
 .IP \[bu]
 .I get_language_name: 
-Get all language names defined for this grammar
+Get all language names defined for this grammar.
 .IP \[bu]
 .I get_label_for_match
 Get the label to associate with a match for a language name.  Note
@@ -190,10 +190,10 @@ Given a language name, get the appropriate grammar.
 .SH BUGS
 There may be some bugs in the grammar library that need to be worked
 out.  I am working to try to find a nice interface that is less
-dependant upon PyParsing.
+dependent on PyParsing.
 
 .SH AUTHOR
-Gabriel A. Weaver <Gabriel.A.Weaver at xutools dot com>
+Gabriel A. Weaver <gabriel.a.l.weaver AT gmail DOT com>
 
 .SH SEE ALSO
 .BR xudiff(1)

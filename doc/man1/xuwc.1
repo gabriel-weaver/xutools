@@ -44,13 +44,13 @@ All files are processed in the order specified.
 The production references that we should count.  By default, this is
 the final step in the provided xupath.  However, this may also be set
 to builtin:byte, builtin:character, builtin:word, or builtin:line.  
-We have not yet tested these tools on Unicode.
+We have not yet tested the byte and character counting on Unicode.
 
 .IP --container
 The context in which to report counts.  By default, this is the file.
 However, it could be any step of the xupath.  If one uses the count
 option, however, the container unit should be set to the final component of
-the xupath
+the xupath.
 
 .SH FILES
 
@@ -86,7 +86,7 @@ Count the number of lines contained in each interface in the router configuratio
 counts relative to interface names.
 
 .P
-.B xuwc \(dqbuiltin:file/builtin:line\(dq ./data/test/cisco_ios/router.v1.example 
+.B xuwc \(dq/builtin:file/builtin:line\(dq ./data/test/cisco_ios/router.v1.example 
 .br
 Count the number of lines per file.
 
@@ -112,7 +112,7 @@ Count the number of paragraphs per section in this security policy.
 Count the number of words per section in this security policy.
 
 .SH AUTHOR
-Gabriel A. Weaver <Gabriel.A.Weaver at xutools dot com>
+Gabriel A. Weaver <gabriel.a.l.weaver AT gmail DOT com>
 
 .SH SEE ALSO
 .BR wc(1),
