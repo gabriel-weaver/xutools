@@ -14,22 +14,15 @@ all: usage
 clean_desc="clean:  clean the build\n"
 clean:
 	rm -rf $(DOC_DIR_DOXYGEN)
-	rm -rf $(DIST_DIR)
 
 init_desc="init:  initialize the build\n"
 init:	
 	mkdir -p $(DOC_DIR_DOXYGEN)
-	mkdir -p $(DIST_DIR)
 
 doc_desc="doc:  generate documentation\n"
 doc:	init
 	doxygen $(CONFIG_DIR)/Doxyfile
 
-dist_desc="dist:  prepare the distribution\n"
-
-#dist_src
-#dist_test
-#dist_webroot
 test:
 	python $(SRC_DIR)/run_test_suite.py
 

@@ -1,5 +1,6 @@
+#!/usr/bin/python
 """
-copyright (c) 2010-2013, Gabriel A. Weaver, Department of Computer
+copyright (c) 2010-2012, Gabriel A. Weaver, Department of Computer
 Science at Dartmouth College. <gabriel.a.l.weaver@gmail.com>
 
 This file is part of XUTools, Python Distribution.
@@ -17,17 +18,23 @@ for more details.
 You should have received a copy of the GNU General Public License               
 along with this program.  If not, see http://www.gnu.org/licenses/
 """
-import unittest
-import xutools.test.corpus as test_corpus
-import xutools.test.tools as test_tools
+import codecs
+from pyparsing import *
+from xutools.tools import XUDiff as XUD
+import optparse
+import sys
 
-xugrepSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUGrep )
-xuwcSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUWc )
-tools_suite = [ xugrepSuite, xuwcSuite ]
+p = optparse.OptionParser()
+p.add_option("-f", "--outfields", dest="output_field_names" )
+p.add_option("-p", "--comp_field", dest="comparison_field" )
+p.add_option("-c", "--cost_fn", dest="cost_fn_name" )
+(options, args) = p.parse_args()
 
-corpusSuite = unittest.TestLoader().loadTestsFromTestCase( test_corpus.TestCorpus )
-corpusElementSuite = unittest.TestLoader().loadTestsFromTestCase( test_corpus.TestCorpusElement )
-corpus_suite = [ corpusElementSuite, corpusSuite ] 
+if ( len(args) < 3 ):
+    print "Usage:  xudiff [ --outfields <field1,...,fieldN>] [--comp_field <field>] [ --cost_fn <cost_fn> ] <xpath> <file1> <file2>"
+    sys.exit(-1)
 
-alltests = unittest.TestSuite( corpus_suite + tools_suite )
-unittest.TextTestRunner(verbosity=2).run(alltests)
+xupath = args[0]
+file_paths = args[1:]
+XUD.xudiff_main( xupath, file_paths, options.output_field_names, options.comparison_field, options.cost_fn_name )
+

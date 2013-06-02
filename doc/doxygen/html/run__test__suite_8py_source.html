@@ -37,6 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -66,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-</div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Namespaces</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,34 +86,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">run_test_suite.py</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">import</span> unittest</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">import</span> xutools.test.distances <span class="keyword">as</span> test_distances</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">import</span> xutools.test.parsers <span class="keyword">as</span> test_parsers</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">import</span> xutools.test.tools <span class="keyword">as</span> test_tools</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;editDistanceSuite = unittest.TestLoader().loadTestsFromTestCase( test_distances.TestEditDistance )</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;zhangShashaSuite = unittest.TestLoader().loadTestsFromTestCase( test_distances.TestZhangShashaTreeDist )</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;distances_suite = [ editDistanceSuite, zhangShashaSuite ]</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;ciscoIOSSuite = unittest.TestLoader().loadTestsFromTestCase( test_parsers.TestCiscoIOSParser )</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;teiLiteSuite = unittest.TestLoader().loadTestsFromTestCase( test_parsers.TestTEILiteParser )</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;nvdSuite = unittest.TestLoader().loadTestsFromTestCase( test_parsers.TestNVDParser )</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;subsetCSuite = unittest.TestLoader().loadTestsFromTestCase( test_parsers.TestSubsetCParser )</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;xpathSuite = unittest.TestLoader().loadTestsFromTestCase( test_parsers.TestXPathParser )</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;parsers_suite = [ ciscoIOSSuite, teiLiteSuite, nvdSuite, subsetCSuite, xpathSuite ]</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;xugrepSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUGrep )</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;xuwcSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUWc )</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;xudiffSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUDiff )</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;tools_suite = [ xugrepSuite, xuwcSuite, xudiffSuite ]</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;alltests = unittest.TestSuite( distances_suite + parsers_suite + tools_suite )</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="code" href="namespacesrc_1_1run__test__suite.html">    1</a></span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="stringliteral">copyright (c) 2010-2012, Gabriel A. Weaver, Department of Computer</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">Science at Dartmouth College. &lt;Gabriel.A.Weaver@Dartmouth.edu&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="stringliteral">This file is part of XUTools, Python Distribution.</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="stringliteral"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="stringliteral">This code is free software:  you can redistribute                </span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="stringliteral">it and/or modify it under the terms of the GNU General Public                   </span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="stringliteral">License as published by the Free Software Foundation, either version            </span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="stringliteral">3 of the License, or (at your option) any later version.                        </span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">                                                                                </span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">XUTools is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">for more details.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">                                                                                </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">You should have received a copy of the GNU General Public License               </span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="stringliteral">along with this program.  If not, see http://www.gnu.org/licenses/</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">import</span> unittest</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">import</span> xutools.test.corpus <span class="keyword">as</span> test_corpus</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">import</span> xutools.test.tools <span class="keyword">as</span> test_tools</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;unittest.TextTestRunner(verbosity=2).run(alltests)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;xugrepSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUGrep )</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;xuwcSuite = unittest.TestLoader().loadTestsFromTestCase( test_tools.TestXUWc )</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;tools_suite = [ xugrepSuite, xuwcSuite ]</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;corpusSuite = unittest.TestLoader().loadTestsFromTestCase( test_corpus.TestCorpus )</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;corpusElementSuite = unittest.TestLoader().loadTestsFromTestCase( test_corpus.TestCorpusElement )</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;corpus_suite = [ corpusElementSuite, corpusSuite ] </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;alltests = unittest.TestSuite( corpus_suite + tools_suite )</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;unittest.TextTestRunner(verbosity=2).run(alltests)</div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 18 2012 15:42:05 for XUTools by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jun 1 2013 21:37:17 for XUTools by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.1.1
 </small></address>

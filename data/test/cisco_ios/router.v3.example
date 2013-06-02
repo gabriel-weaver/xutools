@@ -1,0 +1,16 @@
+interface Loopback0
+  description really cool description
+  ip address 333.444.1.185 255.255.255.255 no ip redirects
+  no ip unreachables
+  ip pim sparse-dense-mode
+  crypto map azalea
+!
+interface GigabitEthernet4/2
+  description Core Network
+  ip address 444.555.2.543 255.255.255.240 
+  ip access-group outbound_filter in
+  ip access-group inbound_filter out
+  no ip redirects
+  no ip unreachables
+  no ip proxy-arp
+!

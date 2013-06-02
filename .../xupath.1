@@ -1,0 +1,200 @@
+.\" Process this file with
+.\" groff -man -Tascii xupath.1
+.\"
+.TH XUPATH 1 "June 2013" XUTools "User Manuals"
+.SH NAME
+xupath \- A general-purpose querying syntax for structured texts,
+including but not limited to XML.  
+
+.SH DESCRIPTION
+A 
+.I xupath 
+consists of a sequence of 
+.I steps 
+(references to language constructs) 
+that are delimited by one or more slashes.  These language constructs
+are represented as a 
+.I language name
+(from our XUTools Grammar Library) that may be qualified with a 
+.I predicate.   
+In this man page, we will describe
+the xupath syntax as well and the grammar library in which language
+constructs are defined.
+
+.SS XUPath Syntax
+.br
+.B Definition of xupath and step:  
+As mentioned above, a 
+.IT xupath 
+consists of a sequence of references to
+language constructs that are delimited by one or more slashes.  We
+will call each of these 'references to a language construct' a 
+.IT step.
+
+.P
+For example, the xupath \(dq/builtin:file/ios:interface\(dq consists
+of two steps that each reference their own language construct.  The
+first step, \(dq/builtin:file\(dq references to a file.  The second
+step, \(dq/ios:interface\(dq references an interface as defined in
+Cisco IOS.  The order of the steps means that matches to this xupath
+query consist of IOS interfaces contained within files.
+
+.br
+.B Definition of language name (and components):  
+Every xupath step contains a 
+.I language name
+, a string that consists of two components:  a
+.I grammar name 
+and a 
+.I production name.  
+The grammar name corresponds to a grammar defined in the XUTools
+Grammar Library (described in the next section) and the production
+name corresponds to a production within that grammar.  
+
+For example, the second step in the xupath
+\(dq/builtin:file/ios:interface/builtin:line\(dq 
+.I corresponds 
+to the interface production in the Cisco IOS grammar of the Grammar
+Library and 
+.I references
+strings in the language of that production.  The third step in the
+same xupath
+.I corresponds
+to the line production in the XUTools Builtin grammar and
+.I references
+strings in the language of that production.  Notice that the xupath
+syntax allows us to mix and match language constructs from different
+grammars.  
+
+.br
+.B Definition of xupath predicate:  
+Sometimes a step's 'language construct' may be further qualified by a 
+.I predicate.
+
+.P
+Currently, the only predicate defined in the xupath syntax is the
+\(dqre:testsubtree\(dq predicate and this allows us to filter strings
+by a regular expression (the name of this predicate may change in the
+future, it came from the XML community).  For example, the second step
+of xupath
+\(dq/builtin:file/tei:subsubsection[re:testsubtree('Globus','e')]\(dq
+references all subsubsections that contain the word 'Globus'.  
+
+.SS XUTools Grammar Library
+In this subsection we discuss the intent of our XUTools Grammar
+Library and how to extend the library to include additional
+constructs.
+
+.P
+.B Intent of the XUTools Grammar Library:  
+We designed the grammar library to isolate references to
+language constructs from the encoding of those constructs much as an
+abstract data type separates a reference to an operation from that
+operation's implementation.  Practitioners already isolate language
+constructs from their encoding naturally:  CISOs reference 
+.I sections
+and 
+.I subsections 
+of a policy and network administrators reference
+.I interfaces.
+C developers, in order to use a library function in their own code,
+must know the name, purpose, and calling sequence of that function but
+not its implementation.  Similariy, users of our grammar library need
+to know the name and purpose of the construct upon which they want to
+operate, but not its specification as a context-free grammar
+production.  
+
+.P
+We designed XUTools to operate in terms of references to language
+constructs because the way in which people
+.I reference
+information remains relatively stable but the manner in which people
+encode information changes with technology.  Consider the historical
+transmission of text in which books and lines of Homer's Odyssey
+migrated from manuscripts, to books, to digital formats.  Although the
+physical media and encoding of text changed, the high-level constructs
+of book and line survived (thanks to friends in the Classics at Holy
+Cross, the Perseus Project at Tufts, and Harvard's Center for Hellenic
+Studies for helping develop this argument).  In software engineering,
+the principle of an Abstract Data Type (ADT) echoes this philosophy---
+although an ADT's implementation may change over time, the interface
+to that implementation remains stable.
+
+.P
+.B How to Extend the XUTools Grammar Library:  
+Currently, the XUTools Grammar Library is implemented as a set of
+grammars written in PyParsing (we may generalize this in the future).
+In order to extend the XUTools Grammar Library, one must first create
+a class for the grammar of the language one wants to add and then
+register that class with the class for the grammar library.
+
+.P
+STEP 1: Create a class for the new language's grammar.  For the
+discussion, we will use the
+.I xutools.grammar.pyparsing.CiscoIOSGrammar.py 
+as an example. 
+
+When we added the Cisco IOS grammar, we created the \(dqCiscoIOSGrammar\(dq
+class in the \(dqxutools/grammar/pyparsing\(dq directory.  Within this
+class, we wrote a PyParsing grammar for Cisco IOS so that the
+productions of that grammar correspond to instance variables.  We then
+defined the 
+.I GRAMMAR_NAME
+as well as the language names for the grammar productions we want to
+process with XUTools (
+.I CONFIG, INTERFACE
+).  A grammar class needs to implement three methods:
+
+.IP \[bu] 2
+.I get_grammar:     
+Given a language name, get the grammar that specifies strings in that
+language.
+.IP \[bu]
+.I get_language_name: 
+Get all language names defined for this grammar
+.IP \[bu]
+.I get_label_for_match
+Get the label to associate with a match for a language name.  Note
+that we use the \(dqsetResultsName\(dq method from
+PyParsing to set a label upon parsing for most productions.  However,
+one can also use the \(dqmatch_idx\(dq to assign a number that
+captures the document order of matches.
+
+.P
+STEP 2: Register the grammar class for the new language with the
+grammar library in \(dqxutools/grammar/__init__.py\(dq.  To do so,
+make the following modifications to this file.  First, import the
+grammar class for the newly-defined language from the previous step.
+Then define an instance variable for the grammar name of the
+newly-added language.  We then want to modify the following methods:
+
+.IP \[bu] 2
+.I get_language_names:
+Given a grammar name return the language names for that grammar.
+.IP \[bu]
+.I get_grammar_instance:
+Given a language name, get the appropriate grammar.  
+
+.SH FILES
+.SH ENVIRONMENT
+.SH DIAGNOSTICS
+.SH BUGS
+There may be some bugs in the grammar library that need to be worked
+out.  I am working to try to find a nice interface that is less
+dependant upon PyParsing.
+
+.SH AUTHOR
+Gabriel A. Weaver <Gabriel.A.Weaver at xutools dot com>
+
+.SH SEE ALSO
+.BR xudiff(1)
+.BR xugrep(1)
+.BR xuwc(1)
+
+
+
+
+
+
+
+  

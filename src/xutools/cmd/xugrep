@@ -1,0 +1,45 @@
+#!/usr/bin/python
+"""
+copyright (c) 2010-2012, Gabriel A. Weaver, Department of Computer
+Science at Dartmouth College. <gabriel.a.l.weaver@gmail.com>
+
+This file is part of XUTools, Python Distribution.
+
+This code is free software:  you can redistribute
+it and/or modify it under the terms of the GNU General Public
+License as published by the Free Software Foundation, either version
+3 of the License, or (at your option) any later version.
+
+XUTools is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see http://www.gnu.org/licenses/
+"""
+from xutools.corpus import CorpusElement
+from xutools.tools import XUGrep
+import optparse
+
+import sys
+
+p = optparse.OptionParser()
+#p.add_option("-t", action="store_true", dest="tabulate")
+(options, args) = p.parse_args()
+
+if ( len(args) < 2 ):
+    print "Usage xugrep <xupath> <files>+"
+    sys.exit(-1)
+
+xupath = args[0]
+file_paths = args[1:]
+
+attribute_names = [ CorpusElement.LABEL_PATH,\
+                        CorpusElement.LANGUAGE_NAME_PATH,\
+                        CorpusElement.TEXT ]
+element_equality_fields = attribute_names
+xugrep = XUGrep.create(xupath, file_paths, element_equality_fields)
+results = xugrep.corpus.output( attribute_names, True )
+print "\n".join(results)
+

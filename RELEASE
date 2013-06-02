@@ -1,0 +1,21 @@
+XUTools Ourea (Oὔρεα):  6.1.2013
+================================
+The goal of this release was to refactor the previously-implementation
+to use the xutools.corpus module.  The goal of this module is to allow
+practitioners to formalize textual analysis techniques as operations
+on a language (a set of strings).  So far we have implemented XUGrep
+and XUWc using this abstraction.  In the future, we will refactor
+XUDiff to use this library as well.  In this release we focused
+primarily on Cisco IOS and TEI-XML data sets.  Finally, we reworked
+the man pages to include examples as well as a description of xupath
+and the XUTools Grammar Library.
+
+We named this release Oὔρεα as much of it was developed in the
+mountains of Hanover, NH during my Ph.D thesis.  Thank you to Sean
+W. Smith (my advisor), Rakesh B. Bobba, Thomas H. Cormen, Doug
+McIlroy, and Daniel Rockmore for their help and guidance through this
+process.  
+
+We want this release (with the corpus-as-language abstraction) to
+provide a strong foundation upon which to extend these tools in the
+future.
